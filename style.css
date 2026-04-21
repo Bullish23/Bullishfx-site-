@@ -215,3 +215,44 @@ footer {
 .logo {
     padding: 5px 0;
 }
+
+/* Mobile Menu Styling */
+.menu-toggle {
+    display: none; /* Hidden by default on computer */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show the button on phones */
+    }
+
+    .nav-links {
+        display: none; /* Hide the links initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #0f172a; /* Same as your theme */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the links when button is clicked */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
