@@ -306,8 +306,13 @@ footer {
 }
 
 /* Ensure your text stays readable on top of the logo */
-.home-page h1, .home-page p {
+.home-page h1, .home-page p {.home-page section, 
+.home-page main, 
+.home-page header {
+    background-color: transparent !important;
+}
     position: relative;
     z-index: 2;
     color: #0f172a; /* Dark navy text for maximum contrast */
 }
+
