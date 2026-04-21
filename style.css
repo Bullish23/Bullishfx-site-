@@ -276,19 +276,38 @@ footer {
     width: 100%; 
     height: 100%;
     
-    /* YOUR LOGO BACKGROUND SETTINGS */
-    background-image: url('logo.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40%; /* Adjust this to make the logo bigger or smaller */
-    
-    /* THE FADE: This makes it a subtle watermark */
-    opacity: 0.1; /* 0.1 is very faint, 0.3 is stronger. Don't go too high! */
-    z-index: 1; /* Keeps it behind the text */
+    /* This targets the background of the Home Page only */
+.home-page {
+    position: relative;
+    background-color: #f1f5f9; /* A clean, light slate background */
 }
 
-.hero-content {
+.home-page::before {
+    content: "";
+    position: fixed; /* Keeps it behind everything while you scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* THE BACKGROUND LOGO */
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%; /* Makes it large enough to cover the main area */
+    
+    /* VISIBILITY SETTINGS */
+    opacity: 0.15; /* Increased from 0.05 to 0.15 to make it clearly visible */
+    z-index: -1;   /* Stays behind text and images */
+    pointer-events: none;
+    
+    /* Optional: If the logo colors are too loud, this makes it a soft gray */
+    /* filter: grayscale(100%); */ 
+}
+
+/* Ensure your text stays readable on top of the logo */
+.home-page h1, .home-page p {
     position: relative;
-    z-index: 2; /* Keeps the text on top of the logo */
-    text-align: center;
+    z-index: 2;
+    color: #0f172a; /* Dark navy text for maximum contrast */
 }
