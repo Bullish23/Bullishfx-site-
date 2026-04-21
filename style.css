@@ -202,3 +202,16 @@ footer {
     font-weight: bold;
     text-decoration: none;
 }
+
+/* Fixing the Logo Size */
+.main-logo {
+    height: 50px;      /* Adjust this number until it looks right */
+    width: auto;        /* This keeps the logo from looking squashed */
+    display: block;
+    object-fit: contain;
+}
+
+/* Optional: Add a little space around it */
+.logo {
+    padding: 5px 0;
+}
