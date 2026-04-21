@@ -315,4 +315,78 @@ footer {
     z-index: 2;
     color: #0f172a; /* Dark navy text for maximum contrast */
 }
+.home-page {
+    background-color: #0f172a; /* Deep, professional Navy */
+    position: relative;
+    overflow-x: hidden;
+}
 
+.home-page::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the logo perfectly */
+    width: 60%; /* Adjust this to make it bigger/smaller */
+    height: 60%;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15; /* Makes it visible but professional */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-home {
+    height: 80vh; /* Takes up most of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-home h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive size */
+    color: white;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: #38bdf8; /* Sharp Sky Blue */
+}
+
+.badge {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-main {
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 13px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-main:hover { background: #7dd3fc; }
+.btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
