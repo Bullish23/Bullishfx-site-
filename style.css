@@ -310,7 +310,6 @@ footer {
     z-index: -1; /* Puts it BEHIND your text and buttons */
     pointer-events: none; /* Makes it "invisible" to clicks */
 }
-}
 
 /* --- 2. HERO CONTENT --- */
 .hero-home {
