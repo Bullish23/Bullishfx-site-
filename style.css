@@ -379,6 +379,24 @@ main {
 .btn-main:hover { background-color: #7dd3fc; }
 .btn-outline:hover { background-color: rgba(56, 189, 248, 0.1); }
 
+.hero-mockup {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.device-img {
+    max-width: 600px; /* Adjust this to make the phone/laptop bigger or smaller */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.8)); /* Adds a 3D shadow */
+    transition: transform 0.5s ease;
+}
+
+.device-img:hover {
+    transform: scale(1.02) translateY(-10px); /* Makes it "pop" when hovered */
+}
+
 
 
 
