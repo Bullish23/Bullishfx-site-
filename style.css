@@ -304,7 +304,7 @@ footer {
     /* DOUBLE CHECK: Is your image exactly logo.png? */
     background-image: url('logo.png'); 
     background-repeat: no-repeat;
-    background-position: center 200px;
+    background-position: center 150px;
     background-size: 80%; /* Start at 50% to see if it appears */
     
     opacity: 0.1; /* Visible enough to test */
