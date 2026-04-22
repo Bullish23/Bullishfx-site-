@@ -217,10 +217,22 @@ footer {
 
 /* Fixing the Logo Size */
 .main-logo {
-    height: 50px;      /* Adjust this number until it looks right */
-    width: auto;        /* This keeps the logo from looking squashed */
-    display: block;
-    object-fit: contain;
+    height: 50px;           /* Adjust size as needed */
+    width: 50px;            /* Width and Height must be equal for a perfect circle */
+    object-fit: cover;      /* Prevents the image from stretching */
+    
+    /* THE MAGIC LINE */
+    border-radius: 50%;     /* This makes it round */
+    
+    /* OPTIONAL: Adds a subtle border to make it pop against the navy */
+    border: 2px solid rgba(255, 255, 255, 0.1); 
+    
+    transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.05); /* Slight grow effect when you hover */
+}
 }
 
 /* Optional: Add a little space around it */
