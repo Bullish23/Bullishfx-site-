@@ -64,12 +64,24 @@ nav {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
+.hero-home h1 {
+    font-size: 4.5rem;          /* Much bigger letters */
+    font-weight: 900;          /* Maximum thickness */
+    text-transform: uppercase; /* Makes it look more institutional */
+    letter-spacing: 4px;       /* Spreads the letters apart */
+    line-height: 1.1;
+    color: #ffffff;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #fff, #38bdf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    max-width: 1000px;         /* Prevents it from getting too skinny */
+}
+
+/* Make sure it looks good on phones too */
+@media screen and (max-width: 768px) {
+    .hero-home h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+}
 }
 
 .hero p {
