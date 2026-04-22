@@ -305,9 +305,9 @@ footer {
     background-image: url('logo.png'); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%; /* Start at 50% to see if it appears */
+    background-size: 80%; /* Start at 50% to see if it appears */
     
-    opacity: 0.2; /* Visible enough to test */
+    opacity: 0.1; /* Visible enough to test */
     z-index: -1;   /* Behind everything */
     pointer-events: none;
 }
