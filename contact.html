@@ -8,56 +8,64 @@
 </head>
 <body> <header>
     <nav class="container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo" class="main-logo">
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="https://wa.me/263789905107" class="btn-whatsapp">Chat on WhatsApp</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="markets.html">Markets</a></li>
-            <li><a href="mentorship.html">Mentorship</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo" class="main-logo"></a>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="markets.html">Markets</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://wa.me/263789905107" class="btn-whatsapp">WhatsApp</a></li>
+    </ul>
+</nav>
 </header>
     
-
-    <section class="container" style="padding: 60px 20px;">
-        <div class="contact-grid">
+<section class="contact-section">
+    <div class="contact-container">
+        
+        <div class="contact-box">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <p>Have questions about mentorship? Send a message.</p>
             
-            <div class="contact-form">
-                <h2>Get in Touch</h2>
-                <p>Have questions about mentorship? Send a message.</p>
-                <form action="#">
-                   <input type="text" placeholder="Your Name" required>
+            <form class="styled-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Email Address" required>
-                    <textarea placeholder="Your Message" rows="5"></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+                </div>
+                <textarea placeholder="Your Message" rows="6"></textarea>
+                <button type="submit" class="btn-main">Send Message</button>
+            </form>
+        </div>
+
+        <div class="testimonial-column">
+            <h3 class="sub-title">Student Success</h3>
+            
+            <div class="t-card">
+                <p>"The 1-on-1 sessions changed my perspective on market structure. I'm finally consistent!"</p>
+                <span class="student-name">- G Chihonde, Funded Trader</span>
             </div>
 
-            <div class="testimonials">
-                <h2>Student Success</h2>
-                
-                <div class="testimonial-card">
-                    <p>"The 1-on-1 sessions changed my perspective on market structure. I'm finally consistent!"</p>
-                    <span>- G Chihonde., Funded Trader</span>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"Best mentorship I've joined. The risk management rules alone saved my account."</p>
-                    <span>- T Munyonho., Forex Student</span>
-                </div>
-                   
-                <div class= "testimonials-card">
-                    <p>"l started with the zero knowledge of the markets, but now the structured lessons made everything clear."</p>
-                    <span>- Abijar
-               </div>
-
+            <div class="t-card">
+                <p>"Best mentorship I've joined. The risk management rules alone saved my account."</p>
+                <span class="student-name">- T Munyonho, Forex Student</span>
+            </div>
+            
+            <div class="t-card">
+                <p>"I started with zero knowledge, but now the structured lessons made everything clear."</p>
+                <span class="student-name">- Abijar</span>
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
