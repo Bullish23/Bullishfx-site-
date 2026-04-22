@@ -285,19 +285,31 @@ footer {
     margin: 0;
 }
 
+/* --- The Background Logo Watermark --- */
 .home-page::after {
     content: "";
-    position: fixed;
+    position: fixed; /* Keeps it in the center even when you scroll */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70vw; /* Big enough to see */
-    height: 70vh;
-    background: url('logo.png') no-repeat center center;
+    transform: translate(-50%, -50%); /* Perfectly centered */
+    
+    /* Size of the background logo */
+    width: 60vw; 
+    height: 60vh;
+    
+    /* Background properties */
+    background-image: url('logo.png'); /* Ensure your file is named logo.png */
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
-    opacity: 0.15; /* Professional subtle look */
-    z-index: -1;
-    pointer-events: none;
+    
+    /* Visibility - 0.1 is very faint, 0.2 is clearly visible */
+    opacity: 0.15; 
+    
+    /* Layering */
+    z-index: -1; /* Puts it BEHIND your text and buttons */
+    pointer-events: none; /* Makes it "invisible" to clicks */
+}
 }
 
 /* --- 2. HERO CONTENT --- */
