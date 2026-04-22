@@ -285,30 +285,41 @@ footer {
     margin: 0;
 }
 
-/* --- The Background Logo Watermark --- */
-.home-page::after {
+/* This ensures the body itself doesn't have a color blocking the logo */
+.home-page {
+    background-color: #0f172a !important; 
+    position: relative;
+    min-height: 100vh;
+}
+
+/* We use ::before on the body to act as the bottom-most layer */
+.home-page::before {
     content: "";
-    position: fixed; /* Keeps it in the center even when you scroll */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Perfectly centered */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     
-    /* Size of the background logo */
-    width: 60vw; 
-    height: 60vh;
-    
-    /* Background properties */
-    background-image: url('logo.png'); /* Ensure your file is named logo.png */
+    /* DOUBLE CHECK: Is your image exactly logo.png? */
+    background-image: url('logo.png'); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 50%; /* Start at 50% to see if it appears */
     
-    /* Visibility - 0.1 is very faint, 0.2 is clearly visible */
-    opacity: 0.15; 
-    
-    /* Layering */
-    z-index: -1; /* Puts it BEHIND your text and buttons */
-    pointer-events: none; /* Makes it "invisible" to clicks */
+    opacity: 0.2; /* Visible enough to test */
+    z-index: -1;   /* Behind everything */
+    pointer-events: none;
+}
+
+/* This forces all sections to be see-through so the logo shows behind them */
+.tradingview-widget-container, 
+section, 
+header, 
+main {
+    background: transparent !important;
+    position: relative;
+    z-index: 1; /* Keeps content above the logo */
 }
 
 /* --- 2. HERO CONTENT --- */
