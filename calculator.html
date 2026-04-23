@@ -26,13 +26,29 @@
         </div>
 
         <div class="calc-box">
-            <div class="input-group">
-                <label>Instrument</label>
-                <select id="instrument" class="calc-input">
-                    <option value="10">Forex Majors (EURUSD, GBPUSD, etc.)</option>
-                    <option value="1">Gold (XAUUSD)</option>
-                    <option value="0.1">Indices (US30, NAS100)</option>
-                </select>
+         <div class="input-group">
+    <label>Select Asset</label>
+    <select id="instrument" class="calc-input">
+        <optgroup label="Forex Majors">
+            <option value="10">EUR/USD</option>
+            <option value="10">GBP/USD</option>
+            <option value="10">AUD/USD</option>
+            <option value="10">NZD/USD</option>
+        </optgroup>
+        
+        <optgroup label="JPY Pairs">
+            <option value="10">USD/JPY</option>
+            <option value="10">GBP/JPY</option>
+            <option value="10">EUR/JPY</option>
+        </optgroup>
+
+        <optgroup label="Other Assets">
+            <option value="1">Gold (XAU/USD)</option>
+            <option value="0.1">US30 / NAS100 (Indices)</option>
+            <option value="10">US Oil (WTI)</option>
+        </optgroup>
+    </select>
+</div>
             </div>
 
             <div class="input-group">
