@@ -822,3 +822,48 @@ a.curriculum-link:hover {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.4) !important;
     transform: translateY(-3px);
 }
+
+/* --- CALCULATOR STYLING --- */
+.calc-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.calc-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.calc-box {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.calc-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.result-display {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-item span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.result-item h3 {
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
