@@ -123,7 +123,7 @@ nav {
         letter-spacing: 2px;
     }
 }
-}
+
 
 .hero p {
     color: #94a3b8;
@@ -274,7 +274,7 @@ footer {
 .main-logo:hover {
     transform: scale(1.05); /* Slight grow effect when you hover */
 }
-}
+
 
 /* Optional: Add a little space around it */
 .logo {
@@ -320,7 +320,7 @@ footer {
     .nav-links li {
         margin: 15px 0;
     }
-}
+
 
 .hero-home {
     position: relative;
