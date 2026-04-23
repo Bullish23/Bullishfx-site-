@@ -48,3 +48,25 @@ menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
 });
+
+function calculateLot() {
+    // 1. Get values from the HTML IDs
+    const instrumentValue = parseFloat(document.getElementById('instrument').value);
+    const balance = parseFloat(document.getElementById('balance').value);
+    const risk = parseFloat(document.getElementById('risk').value);
+    const stoploss = parseFloat(document.getElementById('stoploss').value);
+
+    // 2. Validation
+    if (!balance || !stoploss || stoploss <= 0) {
+        alert("Please enter a valid Balance and Stop Loss pips.");
+        return;
+    }
+
+    // 3. The Math
+    const riskDollars = balance * (risk / 100);
+    let lotSize = riskDollars / (stoploss * instrumentValue);
+
+    // 4. Update the UI
+    document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
+    document.getElementById('lot-result').innerText = lotSize.toFixed(2) + " Lots";
+}
