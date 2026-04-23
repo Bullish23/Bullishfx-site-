@@ -1073,3 +1073,34 @@ a.curriculum-link:hover {
 .highlight-gold {
     color: #d4af37;
 }
+
+/* 1. Make the whole page slide smoothly */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. Style the Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White by default */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* 3. Make them Gold on Hover */
+.nav-links a:hover {
+    color: #d4af37; /* BullishFX Gold */
+}
+
+/* 4. Fix the WhatsApp Button to stay Green/Gold */
+.btn-whatsapp {
+    background: #25d366;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white !important;
+}
+
+.btn-whatsapp:hover {
+    background: #d4af37 !important; /* Turns Gold when you hover! */
+    color: #000 !important;
+}
