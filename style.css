@@ -36,6 +36,22 @@ body {
     transform: translateY(-3px);
 }
 
+/* This forces the color even if the browser thinks it's a visited link */
+a.curriculum-btn:link, 
+a.curriculum-btn:visited {
+    color: #d4af37 !important;
+    border: 2px solid #d4af37 !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    padding: 15px 35px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+}
+
+a.curriculum-btn:hover {
+    background: #d4af37 !important;
+    color: #0a0e17 !important;
+}
 
 .container {
     max-width: 1100px;
