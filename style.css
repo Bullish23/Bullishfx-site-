@@ -867,3 +867,39 @@ a.curriculum-link:hover {
     margin-top: 5px;
     font-size: 1.4rem;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(10, 14, 23, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.active-gold {
+    color: #d4af37 !important;
+    font-weight: bold;
+}
+
+.calc-input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    margin-top: 5px;
+}
