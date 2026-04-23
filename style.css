@@ -978,3 +978,61 @@ a.curriculum-link:hover {
 .accordion-input:checked ~ .accordion-label {
     color: #d4af37;
 }
+
+/* --- Calculator Refinement --- */
+
+/* Labels on the left */
+.input-group label {
+    display: block;
+    color: #60a5fa; /* Professional Light Blue */
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* The Inputs */
+.calc-input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(30, 41, 59, 0.5); /* Darker blue-ish slate */
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.calc-input:focus {
+    border-color: #d4af37; /* Gold border on click */
+}
+
+/* The Gold Calculate Button */
+.calc-btn {
+    width: 100%;
+    padding: 15px;
+    background: #d4af37; /* Solid Gold */
+    color: #000; /* Black text for high contrast */
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.calc-btn:hover {
+    background: #f1c40f; /* Brighter gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Result Section Text */
+.result-item span {
+    color: #60a5fa; /* Blue for the labels below too */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
