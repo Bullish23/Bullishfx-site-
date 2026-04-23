@@ -673,3 +673,69 @@ main {
     background: #38bdf8;
     color: #0a0e17;
 }
+
+/* --- VERTICAL CURRICULUM LAYOUT --- */
+.curriculum-stack {
+    max-width: 700px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column; /* Forces vertical order */
+    gap: 0; /* Removing gap to let the lines connect */
+}
+
+.curriculum-row {
+    display: flex; /* Puts bullet next to text */
+    gap: 30px;
+    padding-bottom: 40px; /* Space between steps */
+}
+
+/* --- THE BULLET & LINE --- */
+.bullet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glow-bullet {
+    width: 14px;
+    height: 14px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+    z-index: 2;
+}
+
+.line {
+    width: 2px;
+    flex-grow: 1; /* Makes the line stretch to the next bullet */
+    background: rgba(56, 189, 248, 0.2);
+    margin: 10px 0;
+}
+
+/* --- TEXT CONTENT --- */
+.module-info {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1;
+}
+
+.step-tag {
+    color: #38bdf8;
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.module-info h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.module-info p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
