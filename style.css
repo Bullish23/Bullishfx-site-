@@ -763,3 +763,62 @@ main {
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Stronger glow on hover */
     transform: translateY(-3px);
 }
+
+/* --- GOLD BUTTON FIX --- */
+.curriculum-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 80px;
+}
+
+/* We use a very specific selector to force the color */
+a.curriculum-btn {
+    display: inline-block !important;
+    padding: 15px 35px !important;
+    background: transparent !important;
+    color: #d4af37 !important; /* Gold */
+    border: 2px solid #d4af37 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+}
+
+a.curriculum-btn:hover {
+    background: #d4af37 !important;
+    color: #0a0e17 !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* --- THE GOLD BUTTON FIX --- */
+.curriculum-footer {
+    text-align: center;
+    margin: 50px 0 100px; /* Gives it space at the bottom */
+}
+
+.curriculum-footer p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* Matching the class name in your HTML */
+a.curriculum-link {
+    display: inline-block !important;
+    padding: 15px 35px !important;
+    background: transparent !important;
+    color: #d4af37 !important; /* Premium Gold */
+    border: 2px solid #d4af37 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+}
+
+a.curriculum-link:hover {
+    background: #d4af37 !important;
+    color: #0a0e17 !important; /* Dark text when hovered */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4) !important;
+    transform: translateY(-3px);
+}
