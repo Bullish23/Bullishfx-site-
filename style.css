@@ -762,7 +762,9 @@ main {
     color: #0a0e17; /* Dark text on gold background */
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Stronger glow on hover */
     transform: translateY(-3px);
-}.curriculum-btn {
+}
+
+.curriculum-btn {
     display: inline-block !important;
     padding: 15px 35px !important;
     color: #d4af37 !important; /* The Gold */
