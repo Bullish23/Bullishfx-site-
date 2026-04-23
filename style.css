@@ -739,3 +739,27 @@ main {
     color: #94a3b8;
     line-height: 1.6;
 }
+
+/* THE GOLD BUTTON STYLING */
+.curriculum-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: transparent;
+    color: #d4af37; /* Premium Gold Color */
+    border: 2px solid #d4af37; /* Gold Border */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1); /* Subtle gold glow */
+}
+
+/* THE HOVER EFFECT */
+.curriculum-btn:hover {
+    background: #d4af37;
+    color: #0a0e17; /* Dark text on gold background */
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Stronger glow on hover */
+    transform: translateY(-3px);
+}
