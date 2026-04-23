@@ -1036,3 +1036,40 @@ a.curriculum-link:hover {
     font-size: 0.85rem;
     text-transform: uppercase;
 }
+
+/* --- Premium Gold Navbar --- */
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* Start with white for readability */
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+/* Change all links to gold when you hover */
+.nav-links a:hover {
+    color: #d4af37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* The active page link stays gold */
+.active-gold {
+    color: #d4af37 !important;
+    font-weight: 700;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+}
+
+/* Update the logo to match */
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.highlight-gold {
+    color: #d4af37;
+}
