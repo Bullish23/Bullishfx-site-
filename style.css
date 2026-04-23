@@ -534,6 +534,40 @@ main {
     font-weight: bold;
 }
 
+/* --- PRICE STYLING --- */
+.price-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: #38bdf8; /* The Blue Accent */
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.duration {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-left: 5px;
+}
+
+/* Make the "Elite" card stand out slightly more */
+.course-card.elite {
+    border: 2px solid #38bdf8;
+    background: rgba(56, 189, 248, 0.05);
+}
+
 
 
 
