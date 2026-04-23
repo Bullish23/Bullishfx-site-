@@ -601,6 +601,13 @@ main {
     font-size: 1.3rem;
 }
 
+/* This targets ONLY the curriculum page body */
+.curriculum-body {
+    background-color: #0a0e17 !important; /* Solid navy background */
+    background-image: none !important;    /* Removes the giant bull logo */
+    min-height: 100vh;
+}
+
 
 
 
