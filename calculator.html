@@ -87,35 +87,7 @@
         </div>
     </main>
 
-    <script>
-        function calculateLot() {
-            // Get values from the page
-            const instrumentValue = parseFloat(document.getElementById('instrument').value);
-            const balance = parseFloat(document.getElementById('balance').value);
-            const risk = parseFloat(document.getElementById('risk').value);
-            const stoploss = parseFloat(document.getElementById('stoploss').value);
+  <script src="script.js"></script>
 
-            // Validation: Stop the math if inputs are empty or zero
-            if (!balance || !stoploss || stoploss <= 0) {
-                alert("Please enter a valid Account Balance and Stop Loss.");
-                return;
-            }
-
-            // Calculation Logic
-            // 1. Find how much money is being risked
-            const riskDollars = balance * (risk / 100);
-            
-            // 2. Determine lot size based on pip value
-            const lotSize = riskDollars / (stoploss * instrumentValue);
-
-            // Update the UI with formatted numbers
-            document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
-            
-            // If the lot size is very small, we show 2 decimal places minimum
-            document.getElementById('lot-result').innerText = lotSize.toFixed(2) + " Lots";
-            
-            console.log("Calculation Successful: ", lotSize);
-        }
-    </script>
 </body>
 </html>
