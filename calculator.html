@@ -3,66 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lot Size Calculator | BullishFX</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Position Size Calculator | BullishFX</title>
+    <link rel="stylesheet" href="style.css?v=1.2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="logo">BULLISH<span class="highlight-gold">FX</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="calculator.html" class="active-gold">Lot Calculator</a></li>
+            <li><a href="contact.html">Support</a></li>
+        </ul>
+    </nav>
 
     <main class="calc-container">
         <div class="calc-header">
             <h1>Position <span class="highlight-gold">Size Calculator</span></h1>
-            <p>Calculate your risk before entering the market.</p>
+            <p>Risk management is the key to longevity in trading.</p>
         </div>
 
         <div class="calc-box">
             <div class="input-group">
+                <label>Instrument</label>
+                <select id="instrument" class="calc-input">
+                    <option value="10">Forex Majors (EURUSD, GBPUSD, etc.)</option>
+                    <option value="1">Gold (XAUUSD)</option>
+                    <option value="0.1">Indices (US30, NAS100)</option>
+                </select>
+            </div>
+
+            <div class="input-group">
                 <label>Account Balance ($)</label>
-                <input type="number" id="balance" placeholder="e.g. 10000" value="1000">
+                <input type="number" id="balance" class="calc-input" placeholder="e.g. 10000" value="1000">
             </div>
 
             <div class="input-group">
                 <label>Risk Percentage (%)</label>
-                <input type="number" id="risk" placeholder="e.g. 1" value="1">
+                <input type="number" id="risk" class="calc-input" placeholder="e.g. 1" value="1">
             </div>
 
             <div class="input-group">
                 <label>Stop Loss (Pips)</label>
-                <input type="number" id="stoploss" placeholder="e.g. 15" value="10">
+                <input type="number" id="stoploss" class="calc-input" placeholder="e.g. 15" value="10">
             </div>
 
-            <button onclick="calculateLot()" class="curriculum-link" style="width: 100%; cursor: pointer;">Calculate Position</button>
+            <button onclick="calculateLot()" class="curriculum-link" style="width: 100%; border:none; cursor: pointer; margin-top: 10px;">Calculate Position</button>
 
             <div class="result-display">
                 <div class="result-item">
-                    <span>Risk Amount:</span>
+                    <span>Risk Amount</span>
                     <h3 id="risk-amount">$0.00</h3>
                 </div>
                 <div class="result-item">
-                    <span>Recommended Lot Size:</span>
+                    <span>Lot Size</span>
                     <h3 id="lot-result" class="highlight-gold">0.00</h3>
                 </div>
             </div>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <a href="index.html" class="curriculum-link">Back to Home</a>
+            <a href="index.html" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem;">← Return to Dashboard</a>
         </div>
     </main>
 
     <script>
         function calculateLot() {
-            const balance = document.getElementById('balance').value;
-            const risk = document.getElementById('risk').value;
-            const stoploss = document.getElementById('stoploss').value;
+            const instrumentValue = parseFloat(document.getElementById('instrument').value);
+            const balance = parseFloat(document.getElementById('balance').value);
+            const risk = parseFloat(document.getElementById('risk').value);
+            const stoploss = parseFloat(document.getElementById('stoploss').value);
 
-            // Math: (Balance * (Risk/100)) / (Stoploss * 10)
-            // Note: 10 is the multiplier for standard lots (1 pip = $10 for 1 lot on most pairs)
+            if (stoploss <= 0 || balance <= 0) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+            // Calculation
             const riskDollars = balance * (risk / 100);
-            const lotSize = riskDollars / (stoploss * 10);
+            const lotSize = riskDollars / (stoploss * instrumentValue);
 
-            document.getElementById('risk-amount').innerText = "$" + riskDollars.toFixed(2);
-            document.getElementById('lot-result').innerText = lotSize.toFixed(2) + " Lots";
+            // Update UI
+            document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
+            document.getElementById('lot-result').innerText = lotSize.toFixed(2);
         }
     </script>
 </body>
