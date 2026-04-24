@@ -1333,18 +1333,37 @@ nav.container {
     margin: 0 auto;
     border-radius: 2px;
 }
-
+/* 1. Kill the thick black bars on every section */
 .content-section {
-    min-height: 100vh; /* Every 'page' takes exactly the full screen */
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     position: relative;
+    border: none !important;        /* Removes all borders */
+    border-bottom: none !important; /* Specifically kills the bottom bars */
+    box-shadow: none !important;    /* Removes any shadows acting like lines */
     padding: 60px 0;
-    /* This makes sure the background of one page doesn't bleed into the next */
-    border-bottom: 10px solid #0a0e17; 
+}
+
+/* 2. Create the single, razor-thin surgical line */
+.page-divider {
+    height: 1px !important; /* Thinnest possible */
+    width: 70%;
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3), transparent);
+    margin: 0 auto;
+    border: none !important;
+    display: block;
+}
+
+/* 3. Clean the footer so it doesn't add extra lines */
+footer {
+    background: transparent !important;
+    border: none !important;
+    padding: 20px 0;
+}
 }
 /* 1. Reset the top ticker to stay thin */
 .ticker-tape-container, 
