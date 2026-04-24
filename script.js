@@ -70,3 +70,13 @@ function calculateLot() {
     document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
     document.getElementById('lot-result').innerText = lotSize.toFixed(2) + " Lots";
 }
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Optional: Animate the hamburger bars into an 'X'
+    mobileMenu.classList.toggle('is-active');
+});
