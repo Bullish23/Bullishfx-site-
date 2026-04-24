@@ -1226,3 +1226,9 @@ html {
         transition: all 0.3s ease;
     }
 }
+
+    /* THIS IS THE MISSING PIECE */
+    .nav-links.active {
+        display: flex !important; /* Forces the menu to show when clicked */
+    }
+}
