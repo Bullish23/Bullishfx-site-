@@ -1389,3 +1389,25 @@ header .tradingview-widget-container {
     margin: 0 auto;
     opacity: 0.5;
 }
+
+/* This removes the thick black blocks from your previous screenshot */
+.content-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: none !important; /* Forces the thick black bars to disappear */
+    padding: 60px 0;
+}
+
+/* This creates the surgical, thin blue line */
+.page-divider {
+    height: 1px; /* The thinnest possible line */
+    width: 70%;  /* Shorter width looks more high-end */
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.4), transparent);
+    margin: 0 auto;
+    border: none;
+}
