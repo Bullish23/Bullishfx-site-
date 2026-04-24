@@ -1,3 +1,18 @@
+ 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Give each section some breathing room so it feels like a new page */
+.content-section {
+    min-height: 100vh; /* This makes each section take up the full screen */
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* General Reset */
 * {
     margin: 0;
