@@ -1189,3 +1189,40 @@ html {
     box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
     transform: translateY(-2px);
 }
+
+/* --- MOBILE MENU FIX --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* We hide the standard menu... */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 14, 23, 0.98); /* Dark background */
+        padding: 20px 0;
+        border-bottom: 2px solid #d4af37; /* Gold bottom line */
+        text-align: center;
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* This class will be "toggled" by your JavaScript */
+    .nav-links.active {
+        display: flex; /* ...and show it when clicked */
+    }
+
+    .menu-toggle {
+        display: block; /* Shows the "Hamburger" icon (three bars) */
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #d4af37; /* Gold bars */
+        margin: 5px auto;
+        transition: all 0.3s ease;
+    }
+}
