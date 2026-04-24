@@ -1232,3 +1232,46 @@ html {
         display: flex !important; /* Forces the menu to show when clicked */
     }
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        
+        /* Positioning Fix */
+        position: absolute;
+        top: 100%; /* This makes it start exactly where the navbar ends */
+        left: 0;
+        width: 100%;
+        
+        /* Content Fix */
+        background: rgba(10, 14, 23, 0.98); /* Solid dark color */
+        padding: 20px 0;
+        z-index: 1000;
+        
+        /* Remove fullscreen stretching */
+        height: auto; 
+        max-height: 400px; /* Limits how far it drops down */
+        overflow-y: auto; /* Adds a scroll if you have too many links */
+        
+        border-bottom: 2px solid #d4af37; /* The "Bullish" Gold line at the bottom */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* Make the links look like a list, not a mess */
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
