@@ -1167,3 +1167,25 @@ html {
     background: #128c7e;
     transform: translateY(-2px); /* Slight lift effect */
 }
+
+/* --- Return to Dashboard Button --- */
+.return-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    background-color: #1e293b; /* Deep Blue Slate */
+    color: #60a5fa !important; /* Professional Light Blue */
+    text-decoration: none;
+    border: 1px solid #60a5fa;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.return-link:hover {
+    background-color: #60a5fa;
+    color: #000000 !important; /* Text turns black for contrast on hover */
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+    transform: translateY(-2px);
+}
