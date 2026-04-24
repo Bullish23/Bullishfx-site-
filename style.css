@@ -1333,28 +1333,32 @@ nav.container {
     margin: 0 auto;
     border-radius: 2px;
 }
-/* 1. Kill the thick black bars on every section */
+/* 1. The Section Container */
 .content-section {
-    min-height: 100vh;
+    min-height: 100vh; /* Force it to take the full screen */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;   /* Changed from flex to block to ensure content shows */
     position: relative;
-    border: none !important;        /* Removes all borders */
-    border-bottom: none !important; /* Specifically kills the bottom bars */
-    box-shadow: none !important;    /* Removes any shadows acting like lines */
-    padding: 60px 0;
+    padding-top: 80px; /* Room for your fixed navbar */
+    margin: 0;
+    overflow: visible; /* Make sure content isn't being cut off */
+    border: none !important; 
 }
 
-/* 2. Create the single, razor-thin surgical line */
+/* 2. The Single Razor-Thin Line */
 .page-divider {
-    height: 1px !important; /* Thinnest possible */
-    width: 70%;
-    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3), transparent);
+    display: block;
+    height: 1px !important;
+    width: 80%;
     margin: 0 auto;
+    background: rgba(96, 165, 250, 0.3); /* Subtle blue */
     border: none !important;
+}
+
+/* 3. Ensure the Chart Container has height */
+#main-trading-chart {
+    min-height: 600px;
+    width: 100%;
     display: block;
 }
 
