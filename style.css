@@ -1129,9 +1129,41 @@ html {
     gap: 20px;
 }
 
-/* This is a test to see if the file is connected */
+/* --- Clean Professional Navbar --- */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Spacing between links */
+}
+
 .nav-links a {
-    color: #d4af37 !important;
-    font-size: 25px !important;
-    border: 2px solid red !important;
+    text-decoration: none;
+    color: #ffffff; /* Start white for a clean look */
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* The Gold Hover Effect */
+.nav-links a:hover {
+    color: #d4af37; /* Bullish Gold */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Subtle glow */
+}
+
+/* Styling the WhatsApp Button specifically */
+.btn-whatsapp {
+    background: #25d366;
+    color: white !important; /* Keep text white even on hover */
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+    transform: translateY(-2px); /* Slight lift effect */
 }
