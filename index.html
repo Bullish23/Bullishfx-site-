@@ -50,9 +50,9 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#markets">Markets</a></li>
         <li><a href="#mentorship">Mentorship</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact">Contact</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="calculator.html">Lot Calculator</a></li>
+        <li><a href="#calculator">Lot Calculator</a></li>
         <li><a href="https://wa.me/263789905107" class="btn-whatsapp">WhatsApp</a></li>
     </ul>
 </nav>
@@ -199,6 +199,99 @@
         </section>
 
     <section id="calculator" class="content-section">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Size Calculator | BullishFX</title>
+    <link rel="stylesheet" href="style.css?v=1.3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="logo">BULLISH<span class="highlight-gold">FX</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mentorship.html">Mentorship</a></li>
+            <li><a href="calculator.html" class="active-gold">Lot Calculator</a></li>
+            <li><a href="contact.html">Support</a></li>
+        </ul>
+    </nav>
+
+    <main class="calc-container">
+        <div class="calc-header">
+            <h1>Position <span class="highlight-gold">Size Calculator</span></h1>
+            <p>Risk management is the key to longevity in trading.</p>
+        </div>
+
+        <div class="calc-box">
+         <div class="input-group">
+    <label>Select Asset</label>
+    <select id="instrument" class="calc-input">
+        <optgroup label="Forex Majors">
+            <option value="10">EUR/USD</option>
+            <option value="10">GBP/USD</option>
+            <option value="10">AUD/USD</option>
+            <option value="10">NZD/USD</option>
+        </optgroup>
+        
+        <optgroup label="JPY Pairs">
+            <option value="10">USD/JPY</option>
+            <option value="10">GBP/JPY</option>
+            <option value="10">EUR/JPY</option>
+        </optgroup>
+
+        <optgroup label="Other Assets">
+            <option value="1">Gold (XAU/USD)</option>
+            <option value="0.1">US30 / NAS100 (Indices)</option>
+            <option value="10">US Oil (WTI)</option>
+        </optgroup>
+    </select>
+</div>
+            </div>
+
+            <div class="input-group">
+                <label>Account Balance ($)</label>
+                <input type="number" id="balance" class="calc-input" placeholder="e.g. 10000" value="1000">
+            </div>
+
+            <div class="input-group">
+                <label>Risk Percentage (%)</label>
+                <input type="number" id="risk" class="calc-input" placeholder="e.g. 1" value="1">
+            </div>
+
+            <div class="input-group">
+                <label>Stop Loss (Pips)</label>
+                <input type="number" id="stoploss" class="calc-input" placeholder="e.g. 15" value="10">
+            </div>
+
+            <button onclick="calculateLot()" class="calc-btn">
+    Calculate Position
+</button>
+
+            <div class="result-display">
+                <div class="result-item">
+                    <span>Risk Amount</span>
+                    <h3 id="risk-amount">$0.00</h3>
+                </div>
+                <div class="result-item">
+                    <span>Lot Size</span>
+                    <h3 id="lot-result" class="highlight-gold">0.00</h3>
+                </div>
+            </div>
+        </div>
+        
+   <div style="text-align: center; margin-top: 30px;">
+    <a href="index.html" class="return-link">← Return to Dashboard</a>
+</div>
+    </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
         </section>
 
     <section id="faq" class="content-section">
