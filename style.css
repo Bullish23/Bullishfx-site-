@@ -1346,4 +1346,25 @@ nav.container {
     /* This makes sure the background of one page doesn't bleed into the next */
     border-bottom: 10px solid #0a0e17; 
 }
+/* 1. Reset the top ticker to stay thin */
+.ticker-tape-container, 
+header .tradingview-widget-container {
+    height: 45px !important;
+    overflow: hidden;
+}
 
+/* 2. Style the main market chart specifically */
+#main-trading-chart {
+    width: 100% !important;
+    height: 700px !important;
+    border: 2px solid #60a5fa; /* That Bullish blue border */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 3. Ensure the container takes up the full width of the screen */
+#markets .container {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+}
