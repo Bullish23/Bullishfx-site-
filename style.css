@@ -1392,4 +1392,14 @@ header .tradingview-widget-container {
     margin: 0 auto;
 }
 
+/* This ensures the space above and below the thin line is equal */
+.content-section {
+    padding: 80px 0 !important; /* Adjust this number to change the "breathing room" */
+    margin: 0 !important;
+}
+
+/* This makes sure the first element in a section doesn't push the divider away */
+.content-section h2 {
+    margin-top: 0;
+}
 
