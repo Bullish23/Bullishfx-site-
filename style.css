@@ -1284,3 +1284,28 @@ nav.container {
     padding: 15px 5%;
     background: #0a0e17;
 }
+
+/* Update your main nav container */
+nav.container {
+    background: linear-gradient(90deg, #d4af37, #f2d472); /* Gradient gold for a metallic look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 2px solid #b8860b; /* A slightly darker gold border for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow so it pops off the background */
+    border-radius: 8px; /* Keeps your current rounded look */
+    margin: 20px auto; /* Centers it if it's a floating bar */
+    width: 90%; /* Keeps it from touching the edges */
+}
+
+/* IMPORTANT: We must change the link colors to BLACK so they are readable on gold */
+.nav-links a {
+    color: #0a0e17 !important; /* Dark navy or black text */
+    font-weight: 700; /* Makes text thicker and more professional */
+}
+
+/* Hover effect for when the bar is gold */
+.nav-links a:hover {
+    color: #ffffff !important; /* Turns white when you hover */
+}
