@@ -80,3 +80,17 @@ mobileMenu.addEventListener('click', () => {
     // Optional: Animate the hamburger bars into an 'X'
     mobileMenu.classList.toggle('is-active');
 });
+
+// This ensures the script waits for the page to load
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('.nav-links');
+
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            // Check if it's working in the console (Press F12 to see)
+            console.log("Menu clicked!"); 
+            navList.classList.toggle('active');
+        });
+    }
+});
