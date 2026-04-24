@@ -1104,3 +1104,27 @@ html {
     background: #d4af37 !important; /* Turns Gold when you hover! */
     color: #000 !important;
 }
+
+/* Navbar Link Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Gold Hover Effect */
+.nav-links a:hover {
+    color: #d4af37; /* Signature Gold */
+}
+
+/* Remove the bullet points if they appear */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
