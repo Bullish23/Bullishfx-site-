@@ -1128,3 +1128,10 @@ html {
     align-items: center;
     gap: 20px;
 }
+
+/* This is a test to see if the file is connected */
+.nav-links a {
+    color: #d4af37 !important;
+    font-size: 25px !important;
+    border: 2px solid red !important;
+}
