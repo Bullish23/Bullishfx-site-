@@ -1347,23 +1347,3 @@ nav.container {
     border-bottom: 10px solid #0a0e17; 
 }
 
-/* Target the markets section specifically */
-#markets .container {
-    max-width: 95%; /* Allows the chart to use almost the whole screen width */
-    width: 100%;
-}
-
-.tradingview-widget-container {
-    width: 100% !important;
-    height: 650px !important; /* Increase this number to make it taller */
-    margin: 20px auto;
-    border: 1px solid #60a5fa; /* Adds a thin blue border to match your brand */
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* This ensures the iframe inside the widget follows the new height */
-.tradingview-widget-container iframe {
-    height: 650px !important;
-    width: 100% !important;
-}
