@@ -92,41 +92,29 @@
 </header>
 
 
-
-    <section id="markets" class="content-section">
-    <div class="container">
-        <h2>Market Overview</h2>
-        <p>Real-time currency pair performance and technical analysis.</p>
+<section id="about" class="content-section">
+    <div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap; text-align: left;">
         
-        <div id="main-trading-chart" class="tradingview-widget-container" style="margin-top: 30px;">
-            <div id="tradingview_chart"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-              "width": "100%",
-              "height": 700, /* This makes the chart much taller */
-              "symbol": "FX:EURUSD",
-              "interval": "D",
-              "timezone": "Etc/UTC",
-              "theme": "dark",
-              "style": "1",
-              "locale": "en",
-              "toolbar_bg": "#0f172a", /* Matches your deep blue */
-              "enable_publishing": false,
-              "hide_side_toolbar": false,
-              "allow_symbol_change": true,
-              "container_id": "tradingview_chart"
-            });
+        <div style="flex: 1; min-width: 300px;">
+            <img src="your-logo-large.png" alt="BullishFX Founder" style="width: 100%; border-radius: 20px; border: 2px solid #60a5fa; box-shadow: 0 0 20px rgba(96,165,250,0.2);">
+        </div>
 
-            </script>
+        <div style="flex: 1.5; min-width: 300px;">
+            <h2 style="text-align: left;">Behind <span style="color: #60a5fa;">BullishFX</span></h2>
+            <p style="margin: 20px 0;">Founded on the principles of precision and discipline, BullishFX was created to bridge the gap between retail struggle and institutional clarity.</p>
+            
+            <div style="margin-top: 30px;">
+                <h4 style="color: #fff; margin-bottom: 10px;">Our Mission</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">To empower 1,000 traders to achieve financial independence through simplified price action and high-probability setups.</p>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <h4 style="color: #fff; margin-bottom: 10px;">The Strategy</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">We don't use lagging indicators. We trade pure market structure, liquidity sweeps, and volume profile.</p>
+            </div>
         </div>
+
     </div>
-       <footer>
-        <div class="container">
-            <p>&copy; 2026 Bullishfx. All rights reserved.</p>
-            <p class="risk"><strong>Risk Warning:</strong> Trading involves significant risk.</p>
-        </div>
-    </footer>
 </section>
  
 <script src="script.js"></script>
