@@ -1438,3 +1438,32 @@ p {
     color: #cbd5e1; /* A slightly brighter gray to make it readable against dark blue */
 }
 
+.contact-input {
+    background: #0f172a !important;
+    border: 1px solid #1e293b !important;
+    padding: 12px 15px !important;
+    border-radius: 6px !important;
+    color: #fff !important;
+    font-size: 0.9rem !important;
+    width: 100%;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-input:focus {
+    border-color: #60a5fa !important;
+    background: #1e293b !important;
+}
+
+/* Custom styling for the select dropdown arrow */
+select.contact-input {
+    appearance: none;
+    cursor: pointer;
+}
+
+.social-icon-row a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    filter: brightness(1.2);
+}
+
