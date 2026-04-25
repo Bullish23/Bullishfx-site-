@@ -1403,3 +1403,21 @@ header .tradingview-widget-container {
     margin-top: 0;
 }
 
+/* Professional Scaling */
+h2 {
+    font-size: 2rem !important; /* Was probably 3rem+ before */
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem !important; /* Clean, readable size */
+    line-height: 1.6;
+    max-width: 700px; /* Prevents text from stretching too wide */
+    margin: 0 auto 20px;
+}
+
+.content-section {
+    padding: 60px 0 !important; /* Reduces the massive gaps between sections */
+}
+
