@@ -1423,7 +1423,7 @@ p {
 
 .about-image {
     width: 100%;
-    max-width: 400px; /* This is the "sweet spot" size */
+    max-width: 300px; /* This is the "sweet spot" size */
     height: auto;
     border-radius: 15px;
     border: 1px solid rgba(96, 165, 250, 0.3);
