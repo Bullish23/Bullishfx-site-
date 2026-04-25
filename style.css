@@ -1421,3 +1421,14 @@ p {
     padding: 60px 0 !important; /* Reduces the massive gaps between sections */
 }
 
+.about-image {
+    width: 100%;
+    max-width: 400px; /* This is the "sweet spot" size */
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 0 0 30px rgba(96, 165, 250, 0.1); /* Subtle blue glow */
+    display: block;
+    margin: 0 auto;
+}
+
