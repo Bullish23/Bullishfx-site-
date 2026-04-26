@@ -1633,3 +1633,33 @@ select.contact-input {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    /* Hide the menu by default and move it off-screen */
+    .nav-links {
+        display: none; /* or use position absolute and opacity 0 */
+        flex-direction: column;
+        width: 100%;
+        background: #0a0e17; 
+        position: absolute;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* When JavaScript adds the 'active' class, show the menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+    
+    /* Make the bars clickable */
+    .menu-toggle {
+        cursor: pointer;
+        display: block;
+    }
+}

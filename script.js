@@ -110,3 +110,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 </script>
+
+<script>
+    const menu = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links a');
+
+    // 1. Toggle menu when clicking the bars
+    menu.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menu.classList.toggle('is-active'); // This can animate your bars to an 'X'
+    });
+
+    // 2. Close menu when a link is clicked (so it doesn't block the screen)
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
