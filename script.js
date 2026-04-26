@@ -112,20 +112,20 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
-    const menu = document.querySelector('#mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links a');
+    const menuBtn = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('.nav-links');
 
-    // 1. Toggle menu when clicking the bars
-    menu.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        menu.classList.toggle('is-active'); // This can animate your bars to an 'X'
+    menuBtn.addEventListener('click', () => {
+        // Test Alert - You can delete the line below once it works
+        console.log("Menu button was clicked!"); 
+        
+        navList.classList.toggle('active');
     });
 
-    // 2. Close menu when a link is clicked (so it doesn't block the screen)
-    links.forEach(link => {
+    // Close menu when any link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            navList.classList.remove('active');
         });
     });
 </script>
