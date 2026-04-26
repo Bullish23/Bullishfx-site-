@@ -1502,3 +1502,18 @@ select.contact-input {
     box-shadow: 0 10px 40px rgba(96, 165, 250, 0.2);
 }
 
+/* Remove forced heights and tighten gaps */
+.content-section {
+    min-height: auto !important; /* Prevents sections from forcing 100% screen height */
+    height: auto !important; 
+    padding: 60px 0 !important; /* Standardizes top/bottom spacing */
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+/* Fix for the container inside sections */
+.container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
