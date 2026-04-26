@@ -1517,3 +1517,54 @@ select.contact-input {
     margin-bottom: 0 !important;
 }
 
+/* MOBILE OPTIMIZATIONS */
+@media (max-width: 768px) {
+    /* 1. Header & Navigation */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* 2. Hero Headings */
+    h1 {
+        font-size: 1.8rem !important; /* Makes big titles fit on one screen */
+        padding: 0 10px;
+    }
+
+    /* 3. Cards (Mentorship & Success) */
+    .course-grid, .success-grid {
+        display: flex;
+        flex-direction: column; /* Stacks cards on top of each other */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .course-card, .success-card {
+        width: 90% !important; /* Cards take up full width on phone */
+        max-width: 350px;
+    }
+
+    /* 4. Calculator */
+    .calc-container {
+        width: 95% !important;
+        padding: 20px !important;
+    }
+
+    /* 5. Footer */
+    footer div {
+        text-align: center !important; /* Centers footer text on phone */
+    }
+
+    footer .social-icons {
+        justify-content: center;
+    }
+}
+
