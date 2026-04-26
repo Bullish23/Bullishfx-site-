@@ -28,44 +28,95 @@
 </nav>
 </header>
     
-<section class="contact-section">
-    <div class="contact-container">
+<section id="contact" class="content-section" style="padding: 80px 0 20px 0; background: #0a0e17;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; display: flex; gap: 50px; flex-wrap: wrap; justify-content: space-between;">
         
-        <div class="contact-box">
-            <h2>Get in <span class="highlight">Touch</span></h2>
-            <p>Have questions about mentorship? Send a message.</p>
+        <div style="flex: 1; min-width: 320px; text-align: left;">
+            <h2 style="font-size: 2.2rem; color: #fff; text-transform: uppercase; margin-bottom: 20px;">WE'RE HERE<span class="gold-text"> REACH OUT</span></h2>
+            <p style="color: #94a3b8; line-height: 1.6; margin-bottom: 40px;">For all your unanswered questions, or need to confirm something. Contact us through any channel below we will get back to you quickly </p>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <a href="mailto:bullishforex23@gmail.com" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: rgba(96, 165, 250, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #60a5fa;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; margin: 0;">Email</p>
+                        <p style="margin: 0; color: #60a5fa; font-weight: bold;">bullishforex23@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/263789905107" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: rgba(34, 197, 94, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #22c55e;">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; margin: 0;">WhatsApp</p>
+                        <p style="margin: 0; color: #22c55e; font-weight: bold;">+263 789905107</p>
+                    </div>
+                </a>
+
+                <a href="https://t.me/bullish_23" target="_blank" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <div style="background: rgba(0, 136, 204, 0.1); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #0088cc;">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; margin: 0;">Telegram</p>
+                        <p style="margin: 0; color: #0088cc; font-weight: bold;">@bullish_23</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <a href="https://instagram.com/bullish_forex" target="_blank" style="background: #e1306c; color: #fff; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/Bullish Forex Academy" target="_blank" style="background: #1877f2; color: #fff; width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://tiktok.com/@sir_bullish23" target="_blank" style="background: #000; color: #fff; width: 45px; height: 45px; border-radius: 10px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div> 
+        <div style="flex: 1.2; min-width: 320px; background: rgba(15, 23, 42, 0.5); padding: 40px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <h3 style="color: #fff; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">Send Us a <span class="gold-text">Message</span></h3>
             
-            <form class="styled-form">
-                <div class="input-group">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
+            <form action="#" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">First Name</label>
+                    <input type="text" placeholder="John" class="contact-input">
                 </div>
-                <textarea placeholder="Your Message" rows="6"></textarea>
-                <button type="submit" class="btn-main">Send Message</button>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Last Name</label>
+                    <input type="text" placeholder="Doe" class="contact-input">
+                </div>
+                <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Email Address</label>
+                    <input type="email" placeholder="john@example.com" class="contact-input">
+                </div>
+                <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Interested In</label>
+                    <select class="contact-input">
+                        <option>Select a service...</option>
+                        <option>Mentorship Program</option>
+                        <option>Market Analysis</option>
+                        <option>1-on-1 coaching</option>
+                        <option>Prop firm Assistance</option>
+                        <option>Advanced Strategy class</option>
+                    </select>
+                </div>
+                <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Your Message</label>
+                    <textarea placeholder="Tell us about your trading experience..." rows="4" class="contact-input" style="width: 100%; grid-column: span 2;"></textarea>
+       
+                <button type="submit" style="grid-column: span 2; background: #60a5fa; color: #fff; padding: 15px; border-radius: 8px; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer;">Send Message</button>
+              </div>  
             </form>
         </div>
-
-        <div class="testimonial-column">
-            <h3 class="sub-title">Student Success</h3>
-            
-            <div class="t-card">
-                <p>"The 1-on-1 sessions changed my perspective on market structure. I'm finally consistent!"</p>
-                <span class="student-name">- G Chihonde, Funded Trader</span>
-            </div>
-
-            <div class="t-card">
-                <p>"Best mentorship I've joined. The risk management rules alone saved my account."</p>
-                <span class="student-name">- T Munyonho, Forex Student</span>
-            </div>
-            
-            <div class="t-card">
-                <p>"I started with zero knowledge, but now the structured lessons made everything clear."</p>
-                <span class="student-name">- Abijar</span>
-            </div>
         </div>
-
-    </div>
 </section>
+
 <script src="script.js"></script>
 </body>
 </html>
