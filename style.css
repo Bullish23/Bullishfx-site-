@@ -1582,3 +1582,24 @@ select.contact-input {
     }
 }
 
+/* Ensure the hamburger icon is ALWAYS on top of the menu itself */
+.menu-icon, #menu-btn, .hamburger { 
+    position: relative;
+    z-index: 10001 !important; /* One level higher than the menu links */
+    cursor: pointer;
+}
+
+/* Make sure the nav-links don't block the screen when they are closed */
+@media (max-width: 768px) {
+    .nav-links {
+        pointer-events: none; /* Disables the "invisible wall" when menu is closed */
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    /* ONLY enable clicks when the menu is actually open */
+    #menu-toggle:checked ~ .nav-links {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
