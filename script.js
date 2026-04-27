@@ -111,21 +111,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 </script>
 
-<script>
-    const menuBtn = document.querySelector('#mobile-menu');
-    const navList = document.querySelector('.nav-links');
-
-    menuBtn.addEventListener('click', () => {
-        // Test Alert - You can delete the line below once it works
-        console.log("Menu button was clicked!"); 
-        
-        navList.classList.toggle('active');
-    });
-
-    // Close menu when any link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('active');
-        });
-    });
-</script>
