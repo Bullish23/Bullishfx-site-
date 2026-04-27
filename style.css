@@ -1,5 +1,4 @@
-html {
-  scroll-behavior: smooth;
+
 } 
 html {
     scroll-behavior: smooth;
@@ -110,7 +109,7 @@ header {
         letter-spacing: 2px;
     }
 }
-}
+
 
 .hero p {
     color: #94a3b8;
