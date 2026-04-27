@@ -95,19 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-<script>
-    // Select all links in your mobile menu
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const menuCheckbox = document.querySelector('#menu-toggle'); // Use the ID of your menu checkbox or button
+const menuBtn = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // This unchecks the menu box, which hides the menu
-            if (menuCheckbox) menuCheckbox.checked = false;
-            
-            // If you used a class like .active instead of a checkbox:
-            // document.querySelector('.nav-links').classList.remove('active');
-        });
-    });
-</script>
+menuBtn.addEventListener('click', () => {
+    console.log("Menu clicked!"); // If this shows up in console, the button is perfect.
+    navLinks.classList.toggle('active');
+});
 
