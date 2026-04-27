@@ -35,11 +35,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid #1e293b;
-}
+
 
 nav {
     display: flex;
