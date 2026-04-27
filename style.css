@@ -1604,4 +1604,40 @@ select.contact-input {
     }
 }
 
+@media (max-width: 768px) {
+    /* The Container */
+    .nav-links {
+        display: none; /* Keep it hidden until 'active' */
+        position: absolute;
+        top: 100%; /* Sits exactly at the bottom of your header */
+        left: 0;
+        width: 100%;
+        background-color: #0a0e17; /* Solid background */
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        z-index: 9999 !important;
+        border-bottom: 2px solid #bf953f; /* Add a thin gold line at the bottom */
+    }
+
+    /* The Trigger */
+    .nav-links.active {
+        display: flex !important;
+        height: auto !important; /* Forces it to grow based on the number of links */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.05); /* Separates links slightly */
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 20px;
+        color: white;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+}
    
