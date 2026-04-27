@@ -37,6 +37,7 @@ body {
 
 
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -1645,5 +1646,28 @@ nav, header, .container {
 }
 nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* FINAL RESET FOR NAVBAR */
+header, 
+nav, 
+nav.container, 
+.navbar {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+/* Remove the blue border you added to the gradient nav recently */
+nav.container {
+    border-bottom: 0px solid transparent !important;
+    box-shadow: none !important;
+}
+
+/* Force the header to have NO bottom line */
+header {
+    border-bottom: 0px solid transparent !important;
 }
    
