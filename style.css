@@ -1640,4 +1640,11 @@ select.contact-input {
         width: 100%;
     }
 }
+
+nav, header, .container {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-bottom: none !important;
+}
    
