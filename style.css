@@ -1678,4 +1678,19 @@ nav.container {
 header {
     border-bottom: 0px solid transparent !important;
 }
+/* This ensures that when JavaScript adds 'active', the menu MUST show up */
+@media (max-width: 768px) {
+    .nav-links.active {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        /* Position it right below the header */
+        position: absolute !important;
+        top: 60px; /* Adjust this based on your header height */
+        left: 0;
+        width: 100%;
+        background-color: #0a0e17; /* BullishFX Dark Theme */
+    }
+}
    
