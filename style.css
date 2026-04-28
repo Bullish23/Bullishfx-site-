@@ -101,26 +101,40 @@ header {
     margin-bottom: 20px;
     max-width: 1000px;         /* Prevents it from getting too skinny */
 }
-
 @media (max-width: 768px) {
     .nav-links {
-        /* Remove 100vh if it's there */
-        height: auto !important; 
-        padding: 20px 0 !important;
-        gap: 0 !important; /* Removes gap between items */
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 60px;     /* Positioned right under the logo/hamburger */
+        left: 0;
+        
+        /* SIZE CONTROL: This makes it small like your example */
+        width: 60%;    /* Only covers 60% of the width, not the whole screen */
+        height: auto;  /* Only as tall as the links themselves */
+        
+        background-color: rgba(10, 14, 23, 0.95); /* Dark semi-transparent */
+        flex-direction: column;
+        padding: 15px 20px !important; /* Space inside the box */
+        z-index: 1000;
+        border-bottom-right-radius: 10px; /* Optional: smooth corner at the bottom */
+    }
+
+    .nav-links.active {
+        display: flex !important;
     }
 
     .nav-links li {
-        padding: 10px 0 !important; /* Smaller space between Home, About, etc. */
+        /* SPACING: This controls the gap between words */
+        padding: 10px 0 !important; 
         margin: 0 !important;
-        width: 100%;
-        border-bottom: 1px solid rgba(191, 149, 63, 0.1); /* Optional: faint gold line separator */
+        text-align: left; /* Aligns text to the left like your example */
     }
 
     .nav-links li a {
-        font-size: 16px !important; /* Makes text a more reasonable size */
-        display: block;
-        width: 100%;
+        font-size: 15px !important;
+        text-transform: uppercase; /* Makes it look professional like the example */
+        color: #ffffff;
+        letter-spacing: 1px;
     }
 }
 
