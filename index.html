@@ -638,12 +638,27 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
     </div>
 </footer>
 <script>
-    const menuIcon = document.querySelector('.hamburger'); // or .menu-icon
-    const navLinks = document.querySelector('.nav-links');
+    // 1. Identify the button and the menu
+    const menuBtn = document.querySelector('.hamburger') || document.querySelector('.menu-icon'); 
+    const navMenu = document.querySelector('.nav-links');
 
-    menuIcon.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', function() {
+            // 2. Toggle the active class
+            navMenu.classList.toggle('active');
+
+            // 3. FORCE the display style if the CSS is being stubborn
+            if (navMenu.classList.contains('active')) {
+                navMenu.style.display = 'flex';
+                navMenu.style.opacity = '1';
+                navMenu.style.pointerEvents = 'auto';
+            } else {
+                navMenu.style.display = 'none';
+                navMenu.style.opacity = '0';
+                navMenu.style.pointerEvents = 'none';
+            }
+        });
+    }
 </script>
 </body>
 </html>
