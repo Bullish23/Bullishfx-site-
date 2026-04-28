@@ -102,14 +102,27 @@ header {
     max-width: 1000px;         /* Prevents it from getting too skinny */
 }
 
-/* Make sure it looks good on phones too */
-@media screen and (max-width: 768px) {
-    .hero-home h1 {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+@media (max-width: 768px) {
+    .nav-links {
+        /* Remove 100vh if it's there */
+        height: auto !important; 
+        padding: 20px 0 !important;
+        gap: 0 !important; /* Removes gap between items */
+    }
+
+    .nav-links li {
+        padding: 10px 0 !important; /* Smaller space between Home, About, etc. */
+        margin: 0 !important;
+        width: 100%;
+        border-bottom: 1px solid rgba(191, 149, 63, 0.1); /* Optional: faint gold line separator */
+    }
+
+    .nav-links li a {
+        font-size: 16px !important; /* Makes text a more reasonable size */
+        display: block;
+        width: 100%;
     }
 }
-
 
 .hero p {
     color: #94a3b8;
