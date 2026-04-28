@@ -639,5 +639,17 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
         <p style="color: #64748b; font-size: 0.75rem;">&copy; 2026 Bullish Forex Academy. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (mobileMenu && navMenu) {
+        mobileMenu.onclick = function() {
+            navMenu.classList.toggle('active');
+            // Optional: makes the bars turn into an X if you have that CSS
+            mobileMenu.classList.toggle('is-active'); 
+        };
+    }
+</script>
 </body>
 </html>
