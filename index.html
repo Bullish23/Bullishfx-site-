@@ -424,9 +424,10 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
     <button type="submit" style="grid-column: span 2; background: #60a5fa; color: #fff; padding: 15px; border-radius: 8px; border: none; font-weight: bold; text-transform: uppercase; cursor: pointer;">Send Message</button>
 
     <!-- 2. Success Message Placeholder (hidden by default) -->
-    <div id="form-status" style="display:none; grid-column: span 2; text-align: center; padding: 15px; background: rgba(96, 165, 250, 0.1); color: #60a5fa; border-radius: 8px; font-weight: bold;">
-        ✔ Thank you! Your message has been sent to BullishFX Academy.
-    </div>
+    <!-- This is now styled to look like a pop-up toast -->
+<div id="form-status" style="display:none; position: fixed; top: 20px; right: 20px; background: #60a5fa; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 1000; font-weight: bold;">
+   ✔ Message Sent Successfully!
+</div>
 </form>
 
 <!-- 3. JavaScript to handle the submission without leaving the page -->
