@@ -103,3 +103,39 @@ menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        // 1. Show the pop-up message
+        status.style.display = "block";
+        
+        // 2. Reset the form fields immediately
+        form.reset();
+
+        // 3. Hide the message after 3 seconds (3000 milliseconds)
+        setTimeout(() => {
+          status.style.display = "none";
+        }, 3000);
+
+      } else {
+        alert("Oops! There was a problem sending your message.");
+      }
+    }).catch(error => {
+      alert("Error connecting to the server.");
+    });
+  }
+  
+  form.addEventListener("submit", handleSubmit);
+</script>
+
