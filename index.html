@@ -438,6 +438,7 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
     event.preventDefault();
     var status = document.getElementById("form-status");
     var data = new FormData(event.target);
+    
     fetch(event.target.action, {
       method: form.method,
       body: data,
@@ -446,18 +447,24 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
       }
     }).then(response => {
       if (response.ok) {
+        // 1. Show the success message
         status.style.display = "block";
+        
+        // 2. Clear the inputs so the client can see it's ready for a new message
         form.reset();
-        // Hide the inputs and button to focus on the success message
-        form.querySelectorAll('div, button').forEach(el => {
-            if(el.id !== 'form-status') el.style.display = 'none';
-        });
+
+        // 3. Optional: Hide the success message after 4 seconds
+        setTimeout(() => {
+          status.style.display = "none";
+        }, 4000);
+
       } else {
         alert("Oops! There was a problem sending your message.");
       }
     });
   }
-  form.addEventListener("submit", handleSubmit)
+  
+  form.addEventListener("submit", handleSubmit);
 </script>
         </div>
         </div>
