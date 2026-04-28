@@ -110,16 +110,16 @@ header {
     .nav-links {
         display: none; /* Hidden by default */
         position: absolute;
-        top: 60px;     /* Positioned right under the logo/hamburger */
+        top: 40px;     /* Positioned right under the logo/hamburger */
         left: 0;
         
         /* SIZE CONTROL: This makes it small like your example */
-        width: 60%;    /* Only covers 60% of the width, not the whole screen */
+        width: 40%;    /* Only covers 60% of the width, not the whole screen */
         height: auto;  /* Only as tall as the links themselves */
         
         background-color: rgba(10, 14, 23, 0.95); /* Dark semi-transparent */
         flex-direction: column;
-        padding: 15px 20px !important; /* Space inside the box */
+        padding: 10px 15px !important; /* Space inside the box */
         z-index: 1000;
         border-bottom-right-radius: 10px; /* Optional: smooth corner at the bottom */
     }
