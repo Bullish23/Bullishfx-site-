@@ -103,5 +103,39 @@ menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        // 1. Immediately wipe the client's information from the boxes
+        form.reset(); 
+
+        // 2. Show the "Message Sent" pop-up
+        status.style.display = "block";
+
+        // 3. Make the pop-up disappear after 3 seconds
+        setTimeout(() => {
+          status.style.display = "none";
+        }, 3000);
+
+      } else {
+        alert("Oops! There was a problem sending your message.");
+      }
+    }).catch(error => {
+      alert("Error connecting to the server.");
+    });
+  }
+  
+  form.addEventListener("submit", handleSubmit);
+</script>
 
