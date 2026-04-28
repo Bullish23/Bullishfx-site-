@@ -17,55 +17,57 @@
 </style>
 </head>
 <body class="home-page">
+    <!-- TradingView Widget stays at the very top -->
     <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
         {
-        "symbols": [
-            { "proName": "FX_IDC:EURUSD", "title": "EUR/USD" },
-            { "proName": "FX_IDC:GBPUSD", "title": "GBP/USD" },
-            { "proName": "FX_IDC:USDJPY", "title": "USD/JPY" },
-            { "proName": "FX_IDC:XAUUSD", "title": "Gold" },
-            { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" }
-        ],
-        "showSymbolLogo": true,
-        "colorTheme": "dark",
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "locale": "en"
+            "symbols": [
+                { "proName": "FX_IDC:EURUSD", "title": "EUR/USD" },
+                { "proName": "FX_IDC:GBPUSD", "title": "GBP/USD" },
+                { "proName": "FX_IDC:USDJPY", "title": "USD/JPY" },
+                { "proName": "FX_IDC:XAUUSD", "title": "Gold" },
+                { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "en"
         }
         </script>
     </div>
 
-    <header>
-        </header>
+    <!-- CLEANED HEADER STARTS HERE -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="BullishFX Logo" class="main-logo"></a>
+            </div>
+
+            <!-- This is your hamburger icon -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- The links -->
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="https://wa.me/263789905107" class="btn-whatsapp">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        </main>
-
-      <header>
-    <nav class="container">
-    <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo" class="main-logo"></a>
-    </div>
-
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-
-    <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="mentorship.html">Mentorship</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="calculator.html">Calculator</a></li>
-    <li><a href="https://wa.me/263789905107" class="btn-whatsapp">WhatsApp</a></li>
-</ul>
-</nav>
-</header>
+        <!-- Your main content starts here after the header -->
+    </main>
 
    <section class="hero-home">
     <div class="hero-container">
@@ -637,28 +639,5 @@ We believe trading is not about luck — it’s about knowledge, patience, and c
         <p style="color: #64748b; font-size: 0.75rem;">&copy; 2026 Bullish Forex Academy. All Rights Reserved.</p>
     </div>
 </footer>
-<script>
-    // 1. Identify the button and the menu
-    const menuBtn = document.querySelector('.hamburger') || document.querySelector('.menu-icon'); 
-    const navMenu = document.querySelector('.nav-links');
-
-    if (menuBtn && navMenu) {
-        menuBtn.addEventListener('click', function() {
-            // 2. Toggle the active class
-            navMenu.classList.toggle('active');
-
-            // 3. FORCE the display style if the CSS is being stubborn
-            if (navMenu.classList.contains('active')) {
-                navMenu.style.display = 'flex';
-                navMenu.style.opacity = '1';
-                navMenu.style.pointerEvents = 'auto';
-            } else {
-                navMenu.style.display = 'none';
-                navMenu.style.opacity = '0';
-                navMenu.style.pointerEvents = 'none';
-            }
-        });
-    }
-</script>
 </body>
 </html>
