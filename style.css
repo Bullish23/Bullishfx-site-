@@ -895,13 +895,22 @@ a.curriculum-link:hover {
     font-size: 1.4rem;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background: rgba(10, 14, 23, 0.95);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+/* This targets the container holding your Logo and Hamburger */
+.header, .navbar {
+    display: flex !important;
+    justify-content: space-between; /* This pushes them to opposite sides */
+    align-items: center;           /* Keeps them vertically centered */
+    padding: 10px 5%;              /* Gives some breathing room on the sides */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;            /* Important for the menu dropdown position */
+}
+
+/* Ensure the logo doesn't take up too much space */
+.logo img {
+    height: 50px; /* Adjust based on your BullishFX logo size */
+    width: auto;
+}
 }
 
 .nav-links {
@@ -1691,6 +1700,51 @@ header {
         left: 0;
         width: 100%;
         background-color: #0a0e17; /* BullishFX Dark Theme */
+    }
+}
+
+.nav-container {
+    display: flex !important;
+    justify-content: space-between !important; /* This is the "magic" line */
+    align-items: center !important;
+    padding: 10px 5%;
+    background-color: #0a0e17; /* Matches your dark theme */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure the hamburger is visible on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 10001;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #bf953f; /* Your Gold color */
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    /* Keep nav-links hidden until active */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sits exactly below header */
+        left: 0;
+        width: 100%;
+        background-color: #0a0e17;
+        z-index: 9999;
+    }
+
+    .nav-links.active {
+        display: flex !important; /* Shows menu when toggled */
     }
 }
    
