@@ -118,6 +118,7 @@ header {
         z-index: 1000;
         border-bottom-right-radius: 10px; /* Optional: smooth corner at the bottom */
     }
+}
 
     .nav-links.active {
         display: flex !important;
