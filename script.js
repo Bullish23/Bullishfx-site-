@@ -50,24 +50,26 @@ menu.addEventListener('click', function() {
 });
 
 function calculateLot() {
-    // 1. Get values from the HTML IDs
-    const instrumentValue = parseFloat(document.getElementById('instrument').value);
+    // 1. Get values from your actual HTML IDs
     const balance = parseFloat(document.getElementById('balance').value);
     const risk = parseFloat(document.getElementById('risk').value);
     const stoploss = parseFloat(document.getElementById('stoploss').value);
+    
+    // 2. Set a default instrument value (10 is standard for Forex)
+    const instrumentValue = 10; 
 
-    // 2. Validation
+    // 3. Validation
     if (!balance || !stoploss || stoploss <= 0) {
-        alert("Please enter a valid Balance and Stop Loss pips.");
+        alert("Please enter a valid Balance and Stop Loss.");
         return;
     }
 
-    // 3. The Math
+    // 4. The Math
     const riskDollars = balance * (risk / 100);
     let lotSize = riskDollars / (stoploss * instrumentValue);
 
-    // 4. Update the UI
-    document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
+    // 5. Update the UI (Matches the IDs you shared earlier)
+    document.getElementById('risk-amount').innerText = "$" + riskDollars.toFixed(2);
     document.getElementById('lot-result').innerText = lotSize.toFixed(2);
 }
 
