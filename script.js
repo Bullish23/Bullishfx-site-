@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const menuBtn = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const allnavLinks = document.querySelector('.nav-links');
 
 menuBtn.addEventListener('click', () => {
     console.log("Menu clicked!"); // If this shows up in console, the button is perfect.
