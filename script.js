@@ -49,8 +49,8 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 });
 
- {
-    function calculateLot()// 1. Get values from the HTML IDs
+function calculateLot() {
+    // 1. Get values from the HTML IDs
     const instrumentValue = parseFloat(document.getElementById('instrument').value);
     const balance = parseFloat(document.getElementById('balance').value);
     const risk = parseFloat(document.getElementById('risk').value);
@@ -68,7 +68,7 @@ menu.addEventListener('click', function() {
 
     // 4. Update the UI
     document.getElementById('risk-amount').innerText = "$" + riskDollars.toLocaleString(undefined, {minimumFractionDigits: 2});
-    document.getElementById('lot-result').innerText = lotSize.toFixed(2) + " Lots";
+    document.getElementById('lot-result').innerText = lotSize.toFixed(2);
 }
 
 const mobileMenu = document.getElementById('mobile-menu');
