@@ -107,44 +107,38 @@ header {
     }
 
 @media (max-width: 768px) {
-
     .nav-links {
-        display: none;
+        display: none; /* Hidden by default */
         position: absolute;
-
-        top: 60px;
-        right: 15px;
-
-        width: 220px;
-        height: auto;
-
-        background: rgba(10, 14, 23, 0.97);
-
+        top: 40px;     /* Positioned right under the logo/hamburger */
+        left: 0;
+        
+        /* SIZE CONTROL: This makes it small like your example */
+        width: 40%;    /* Only covers 60% of the width, not the whole screen */
+        height: auto;  /* Only as tall as the links themselves */
+        
+        background-color: rgba(10, 14, 23, 0.95); /* Dark semi-transparent */
         flex-direction: column;
-        padding: 12px 18px;
-
-        border-radius: 12px;
-
-        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-
+        padding: 10px 15px !important; /* Space inside the box */
         z-index: 1000;
+        border-bottom-right-radius: 10px; /* Optional: smooth corner at the bottom */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-links li {
-        padding: 10px 0;
-        margin: 0;
-        list-style: none;
+        /* SPACING: This controls the gap between words */
+        padding: 10px 0 !important; 
+        margin: 0 !important;
+        text-align: left; /* Aligns text to the left like your example */
     }
 
     .nav-links li a {
-        color: white;
-        text-decoration: none;
-
-        font-size: 15px;
+        font-size: 15px !important;
+        text-transform: uppercase; /* Makes it look professional like the example */
+        color: #ffffff;
         letter-spacing: 1px;
     }
 }
@@ -605,7 +599,7 @@ main {
     display: flex;
     align-items: baseline;
     justify-content: center;
-    color: #ffffff;
+    color: #38bdf8;
 }
 
 .currency {
