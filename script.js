@@ -103,9 +103,8 @@ const mobilenavLinks = document.querySelector('.nav-links');
 menuBtn.addEventListener('click', () => {
     console.log("Menu clicked!"); // If this shows up in console, the button is perfect.
     mobilenavLinks.classList.toggle('active');
-});
+})
 
-<script>
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
@@ -139,5 +138,5 @@ menuBtn.addEventListener('click', () => {
   }
   
   form.addEventListener("submit", handleSubmit);
-</script>
+
 
