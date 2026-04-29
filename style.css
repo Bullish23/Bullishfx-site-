@@ -1,24 +1,12 @@
-
-} 
-html {
-    scroll-behavior: smooth;
-}
-
-/* Give each section some breathing room so it feels like a new page */
-.content-section {
-    min-height: 100vh; /* This makes each section take up the full screen */
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* General Reset */
+/* --- 1. GENERAL RESET & BASE STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +14,7 @@ body {
     background-color: #0f172a; /* Deep dark blue */
     color: #f8fafc;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -34,932 +23,123 @@ body {
     padding: 0 20px;
 }
 
+/* --- 2. NAVIGATION & HEADER --- */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #0a0e17;
+}
 
-
-
-nav {
+nav.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header {
-    position: sticky; /* or fixed */
-    top: 0;
-    width: 100%;
-    z-index: 9999 !important; /* This forces it to the front */
-    background-color: #0a0e17; /* Ensure it has a solid background so you can't see text behind it */
-}
-
-/* If you have a mobile-specific menu container, add it there too */
-.nav-links {
-    z-index: 10000 !important;
-    background: #0a0e17; /* Matches your theme */
+    padding: 12px 5%;
+    background: linear-gradient(90deg, #1e293b, #0f172a); 
+    border-bottom: 2px solid #60a5fa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin: 10px auto;
+    width: 92%;
 }
 
 .logo {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.logo span {
-    color: #38bdf8; /* Accent light blue */
-}
+.highlight-gold { color: #d4af37; }
+.logo span { color: #38bdf8; }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #94a3b8;
-    font-weight: 500;
-    transition: 0.3s;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #38bdf8;
+.nav-links a:hover, .active-gold {
+    color: #d4af37 !important;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
 }
 
-/* Hero Section */
-.hero {
-    padding: 100px 0;
+/* --- 3. HERO SECTION --- */
+.hero-home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-home h1 {
-    font-size: 2.5rem;          /* Much bigger letters */
-    font-weight: 900;          /* Maximum thickness */
-    text-transform: uppercase; /* Makes it look more institutional */
-    letter-spacing: 4px;       /* Spreads the letters apart */
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     line-height: 1.1;
-    color: #ffffff;
     margin-bottom: 20px;
-    max-width: 1000px;         /* Prevents it from getting too skinny */
 }
 
-    .nav-links.active {
-        display: flex !important;
-    }
+.highlight { color: #38bdf8; }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hidden by default */
-        position: absolute;
-        top: 40px;     /* Positioned right under the logo/hamburger */
-        left: 0;
-        
-        /* SIZE CONTROL: This makes it small like your example */
-        width: 40%;    /* Only covers 60% of the width, not the whole screen */
-        height: auto;  /* Only as tall as the links themselves */
-        
-        background-color: rgba(10, 14, 23, 0.95); /* Dark semi-transparent */
-        flex-direction: column;
-        padding: 10px 15px !important; /* Space inside the box */
-        z-index: 1000;
-        border-bottom-right-radius: 10px; /* Optional: smooth corner at the bottom */
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    .nav-links li {
-        /* SPACING: This controls the gap between words */
-        padding: 10px 0 !important; 
-        margin: 0 !important;
-        text-align: left; /* Aligns text to the left like your example */
-    }
-
-    .nav-links li a {
-        font-size: 15px !important;
-        text-transform: uppercase; /* Makes it look professional like the example */
-        color: #ffffff;
-        letter-spacing: 1px;
-    }
-}
-
-.hero p {
-    color: #94a3b8;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* Buttons */
-.btn-primary {
-    background: #38bdf8;
-    color: #0f172a !important;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-.btn-secondary {
-    border: 1px solid #38bdf8;
-    color: #38bdf8 !important;
-    padding: 12px 25px;
-    border-radius: 5px;
-    margin-left: 10px;
-    text-decoration: none;
-}
-
-/* Market Card */
-.market-preview .card {
-    background: #1e293b;
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-}
-
-/* Footer */
-footer {
-    padding: 50px 0;
-    font-size: 0.8rem;
-    color: #64748b;
-    text-align: center;
-}
-
-.risk {
-    margin-top: 20px;
-    border-top: 1px solid #1e293b;
-    padding-top: 20px;
-}
-
-/* Pricing Section */
-.pricing-grid {
+/* --- 4. SECTIONS & DIVIDERS --- */
+.content-section {
+    min-height: 100vh;
+    padding: 80px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    align-items: center;
 }
 
-.price-card {
-    background: #1e293b;
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid #334155;
-    width: 320px;
-    transition: transform 0.3s ease;
+.page-divider {
+    height: 1px;
+    width: 80%;
+    background: rgba(96, 165, 250, 0.3);
+    margin: 0 auto;
 }
 
-.price-card:hover {
-    transform: translateY(-10px);
-}
-
-.price-card.featured {
-    border: 2px solid #38bdf8;
-    position: relative;
-}
-
-.price-card h3 {
-    margin-bottom: 15px;
-    color: #f8fafc;
-}
-
-.price-card .price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.price-card .price span {
-    font-size: 1rem;
-    color: #94a3b8;
-}
-
-.price-card ul {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 30px;
-    color: #94a3b8;
-}
-
-.price-card ul li {
-    margin-bottom: 10px;
-}
-
-.price-card ul li::before {
-    content: "✓";
-    color: #38bdf8;
-    margin-right: 10px;
-}
-
-/* WhatsApp/Call Button Style */
+/* --- 5. BUTTONS --- */
 .btn-whatsapp {
-    background-color: #25d366; /* WhatsApp Green */
+    background: #25d366;
     color: white !important;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: 700;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn-whatsapp:hover {
-    background-color: #128c7e;
-    transform: scale(1.05);
-}
-
-.btn-call {
-    background-color: #38bdf8; /* Your Theme Blue */
-    color: #0f172a !important;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Fixing the Logo Size */
-.main-logo {
-    height: 50px;           /* Adjust size as needed */
-    width: 50px;            /* Width and Height must be equal for a perfect circle */
-    object-fit: cover;      /* Prevents the image from stretching */
-    
-    /* THE MAGIC LINE */
-    border-radius: 50%;     /* This makes it round */
-    
-    /* OPTIONAL: Adds a subtle border to make it pop against the navy */
-    border: 2px solid rgba(255, 255, 255, 0.1); 
-    
-    transition: transform 0.3s ease;
-}
-
-.main-logo:hover {
-    transform: scale(1.05); /* Slight grow effect when you hover */
-}
-}
-
-/* Optional: Add a little space around it */
-.logo {
-    padding: 5px 0;
-}
-
-/* Mobile Menu Styling */
-.menu-toggle {
-    display: none; /* Hidden by default on computer */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex; /* Show the button on phones */
-    }
-
-    .nav-links {
-        display: none; /* Hide the links initially */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #0f172a; /* Same as your theme */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show the links when button is clicked */
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-}
-
-.hero-home {
-    position: relative;
-    width: 100%;
-    min-height: 80vh; /* Takes up 80% of the screen height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #0f172a; /* Your deep navy background */
-}
-/* --- 1. FULL PAGE WATERMARK --- */
-.home-page {
-    background-color: #0f172a; /* Professional Navy */
-    margin: 0;
-}
-
-/* This ensures the body itself doesn't have a color blocking the logo */
-.home-page {
-    background-color: #0f172a !important; 
-    position: relative;
-    min-height: 100vh;
-}
-
-/* We use ::before on the body to act as the bottom-most layer */
-.home-page::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    /* DOUBLE CHECK: Is your image exactly logo.png? */
-    background-image: url('logo.png'); 
-    background-repeat: no-repeat;
-    background-position: center 150px;
-    background-size: 80%; /* Start at 50% to see if it appears */
-    
-    opacity: 0.1; /* Visible enough to test */
-    z-index: -1;   /* Behind everything */
-    pointer-events: none;
-}
-
-/* This forces all sections to be see-through so the logo shows behind them */
-.tradingview-widget-container, 
-section, 
-header, 
-main {
-    background: transparent !important;
-    position: relative;
-    z-index: 1; /* Keeps content above the logo */
-}
-
-/* --- 2. HERO CONTENT --- */
-.hero-home {
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.highlight {
-    color: #38bdf8; /* Sharp Sky Blue */
-}
-
-/* --- 3. THE BUTTONS (Fixing the "Empty" space) --- */
-.hero-actions {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.btn-main {
-    background-color: #38bdf8;
-    color: #0f172a;
-    padding: 14px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-outline {
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
-    padding: 12px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-main:hover { background-color: #7dd3fc; }
-.btn-outline:hover { background-color: rgba(56, 189, 248, 0.1); }
-
-.hero-mockup {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.device-img {
-    max-width: 600px; /* Adjust this to make the phone/laptop bigger or smaller */
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.8)); /* Adds a 3D shadow */
-    transition: transform 0.5s ease;
-}
-
-.device-img:hover {
-    transform: scale(1.02) translateY(-10px); /* Makes it "pop" when hovered */
-}
-
-/* --- CONTACT PAGE LAYOUT --- */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
-
-.contact-box, .testimonial-column {
-    flex: 1; /* Makes both sides equal width */
-}
-
-/* --- FORM STYLING --- */
-.styled-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.input-group {
-    display: flex;
-    gap: 10px;
-}
-
-.styled-form input, .styled-form textarea {
-    background: rgba(255, 255, 255, 0.05); /* Slight transparent white */
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 15px;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-}
-
-.styled-form input:focus {
-    border-color: #38bdf8;
-}
-
-/* --- TESTIMONIAL CARDS --- */
-.t-card {
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border-left: 3px solid #38bdf8; /* Blue brand accent */
-}
-
-.t-card p {
-    font-style: italic;
-    color: #94a3b8;
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-.student-name {
-    color: #38bdf8;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Fix for mobile phones */
-@media screen and (max-width: 800px) {
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
-/* --- MENTORSHIP SECTION --- */
-.mentorship-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- THE CARDS --- */
-.course-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 40px 30px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.course-card:hover {
-    transform: translateY(-10px);
-    border-color: #38bdf8;
-    background: rgba(56, 189, 248, 0.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.course-badge {
-    position: absolute;
-    top: -15px;
-    right: 20px;
-    background: #38bdf8;
-    color: #0f172a;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.course-features {
-    list-style: none;
-    padding: 0;
-    margin: 25px 0;
-    text-align: left;
-}
-
-.course-features li {
-    margin-bottom: 10px;
-    color: #94a3b8;
-}
-
-.course-features li::before {
-    content: "✓";
-    color: #38bdf8;
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-/* --- PRICE STYLING --- */
-.price-container {
-    margin: 20px 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.currency {
-    font-size: 1.5rem;
-    color: #38bdf8; /* The Blue Accent */
-    font-weight: bold;
-    margin-right: 2px;
-}
-
-.price {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-}
-
-.duration {
-    font-size: 1rem;
-    color: #94a3b8;
-    margin-left: 5px;
-}
-
-/* Make the "Elite" card stand out slightly more */
-.course-card.elite {
-    border: 2px solid #38bdf8;
-    background: rgba(56, 189, 248, 0.05);
-}
-
-.module-list {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: left;
-}
-
-.module-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-}
-
-.module-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.module-number {
-    color: #38bdf8;
-    font-weight: 900;
-    font-size: 1.2rem;
-    opacity: 0.5;
-}
-
-.module-item h4 {
-    margin: 0;
-    font-size: 1.3rem;
-}
-
-/* --- CURRICULUM PAGE OVERRIDE --- */
-.curriculum-page-body {
-    background-color: #0a0e17 !important; /* Forces the deep navy */
-    background-image: none !important;    /* Removes that giant bull logo */
-    color: white;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-.curriculum-content {
-    padding: 100px 20px;
-    min-height: 100vh;
-}
-
-.curriculum-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.highlight {
-    color: #38bdf8;
-}
-
-.curriculum-stack {
-    max-width: 800px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.curriculum-row {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: left;
-    transition: 0.3s;
-}
-
-.curriculum-row:hover {
-    border-color: #38bdf8;
-    background: rgba(56, 189, 248, 0.05);
-}
-
-.step-tag {
-    color: #38bdf8;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.curriculum-back {
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* Button Styling if not already in your CSS */
-.btn-outline {
-    border: 1px solid #38bdf8;
-    color: #38bdf8;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-outline:hover {
-    background: #38bdf8;
-    color: #0a0e17;
-}
-
-/* --- VERTICAL CURRICULUM LAYOUT --- */
-.curriculum-stack {
-    max-width: 700px;
-    margin: 60px auto;
-    display: flex;
-    flex-direction: column; /* Forces vertical order */
-    gap: 0; /* Removing gap to let the lines connect */
-}
-
-.curriculum-row {
-    display: flex; /* Puts bullet next to text */
-    gap: 30px;
-    padding-bottom: 40px; /* Space between steps */
-}
-
-/* --- THE BULLET & LINE --- */
-.bullet-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.glow-bullet {
-    width: 14px;
-    height: 14px;
-    background: #38bdf8;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
-    z-index: 2;
-}
-
-.line {
-    width: 2px;
-    flex-grow: 1; /* Makes the line stretch to the next bullet */
-    background: rgba(56, 189, 248, 0.2);
-    margin: 10px 0;
-}
-
-/* --- TEXT CONTENT --- */
-.module-info {
-    text-align: left;
-    background: rgba(255, 255, 255, 0.02);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    flex: 1;
-}
-
-.step-tag {
-    color: #38bdf8;
-    font-weight: 800;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.module-info h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.module-info p {
-    color: #94a3b8;
-    line-height: 1.6;
-}
-
-/* THE GOLD BUTTON STYLING */
-.curriculum-btn {
-    display: inline-block;
-    padding: 15px 35px;
-    background: transparent;
-    color: #d4af37; /* Premium Gold Color */
-    border: 2px solid #d4af37; /* Gold Border */
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1); /* Subtle gold glow */
-}
-
-/* THE HOVER EFFECT */
-.curriculum-btn:hover {
-    background: #d4af37;
-    color: #0a0e17; /* Dark text on gold background */
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5); /* Stronger glow on hover */
-    transform: translateY(-3px);
-}
-
-/* --- GOLD BUTTON FIX --- */
-.curriculum-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding-bottom: 80px;
-}
-
-/* We use a very specific selector to force the color */
-a.curriculum-btn {
-    display: inline-block !important;
-    padding: 15px 35px !important;
-    background: transparent !important;
-    color: #d4af37 !important; /* Gold */
-    border: 2px solid #d4af37 !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    transition: all 0.3s ease !important;
-}
-
-a.curriculum-btn:hover {
     background: #d4af37 !important;
-    color: #0a0e17 !important;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5) !important;
+    color: #000 !important;
+    transform: translateY(-2px);
 }
 
-/* --- THE GOLD BUTTON FIX --- */
-.curriculum-footer {
-    text-align: center;
-    margin: 50px 0 100px; /* Gives it space at the bottom */
-}
-
-.curriculum-footer p {
-    color: #94a3b8;
-    margin-bottom: 20px;
-}
-
-/* Matching the class name in your HTML */
-a.curriculum-link {
-    display: inline-block !important;
-    padding: 15px 35px !important;
-    background: transparent !important;
-    color: #d4af37 !important; /* Premium Gold */
-    border: 2px solid #d4af37 !important;
-    border-radius: 8px !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    transition: all 0.3s ease !important;
-}
-
-a.curriculum-link:hover {
-    background: #d4af37 !important;
-    color: #0a0e17 !important; /* Dark text when hovered */
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4) !important;
-    transform: translateY(-3px);
-}
-
-/* --- CALCULATOR STYLING --- */
-.calc-container {
-    max-width: 500px;
-    margin: 80px auto;
-    padding: 20px;
-}
-
-.calc-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+/* --- 6. CALCULATOR & FORMS --- */
 .calc-box {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(30, 41, 59, 0.5);
     padding: 30px;
     border-radius: 15px;
     border: 1px solid rgba(212, 175, 55, 0.2);
     backdrop-filter: blur(10px);
-}
-
-.calc-box label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
-
-.result-display {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-}
-
-.result-item span {
-    font-size: 0.8rem;
-    color: #94a3b8;
-}
-
-.result-item h3 {
-    margin-top: 5px;
-    font-size: 1.4rem;
-}
-
-/* This targets the container holding your Logo and Hamburger */
-.header, .navbar {
-    display: flex !important;
-    justify-content: space-between; /* This pushes them to opposite sides */
-    align-items: center;           /* Keeps them vertically centered */
-    padding: 10px 5%;              /* Gives some breathing room on the sides */
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;            /* Important for the menu dropdown position */
-}
-
-/* Ensure the logo doesn't take up too much space */
-.logo img {
-    height: 50px; /* Adjust based on your BullishFX logo size */
-    width: auto;
-}
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #94a3b8;
-    transition: 0.3s;
-}
-
-.active-gold {
-    color: #d4af37 !important;
-    font-weight: bold;
 }
 
 .calc-input {
@@ -972,844 +152,56 @@ a.curriculum-link:hover {
     margin-top: 5px;
 }
 
-/* --- FAQ ACCORDION --- */
-.faq-container {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
-
-.faq-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.accordion-item {
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(212, 175, 55, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.accordion-label {
-    display: block;
-    padding: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    position: relative;
-    transition: background 0.3s;
-}
-
-.accordion-label:hover {
-    background: rgba(212, 175, 55, 0.05);
-}
-
-/* The arrow indicator */
-.accordion-label::after {
-    content: '+';
-    position: absolute;
-    right: 20px;
-    color: #d4af37;
-    font-size: 1.2rem;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0, 1, 0, 1);
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.accordion-content p {
-    padding: 20px;
-    color: #94a3b8;
-    line-height: 1.6;
-}
-
-/* Hide the checkbox */
-.accordion-input {
-    display: none;
-}
-
-/* The Magic: Open accordion when checked */
-.accordion-input:checked ~ .accordion-content {
-    max-height: 500px; /* Large enough to fit text */
-    transition: all 0.4s cubic-bezier(1, 0, 1, 0);
-}
-
-.accordion-input:checked ~ .accordion-label::after {
-    content: '-';
-}
-
-.accordion-input:checked ~ .accordion-label {
-    color: #d4af37;
-}
-
-/* --- Calculator Refinement --- */
-
-/* Labels on the left */
-.input-group label {
-    display: block;
-    color: #60a5fa; /* Professional Light Blue */
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* The Inputs */
-.calc-input {
-    width: 100%;
-    padding: 12px;
-    background: rgba(30, 41, 59, 0.5); /* Darker blue-ish slate */
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    border-radius: 6px;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    outline: none;
-    transition: border 0.3s;
-}
-
-.calc-input:focus {
-    border-color: #d4af37; /* Gold border on click */
-}
-
-/* The Gold Calculate Button */
 .calc-btn {
     width: 100%;
     padding: 15px;
-    background: #d4af37; /* Solid Gold */
-    color: #000; /* Black text for high contrast */
+    background: #d4af37;
+    color: #000;
     border: none;
     border-radius: 6px;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    margin-top: 10px;
-    transition: transform 0.2s, background 0.3s;
-}
-
-.calc-btn:hover {
-    background: #f1c40f; /* Brighter gold on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-}
-
-/* Result Section Text */
-.result-item span {
-    color: #60a5fa; /* Blue for the labels below too */
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-/* --- Premium Gold Navbar --- */
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff; /* Start with white for readability */
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-}
-
-/* Change all links to gold when you hover */
-.nav-links a:hover {
-    color: #d4af37;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-}
-
-/* The active page link stays gold */
-.active-gold {
-    color: #d4af37 !important;
-    font-weight: 700;
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 5px;
-}
-
-/* Update the logo to match */
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.highlight-gold {
-    color: #d4af37;
-}
-
-/* 1. Make the whole page slide smoothly */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 2. Style the Navbar Links */
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff; /* White by default */
-    font-weight: 500;
     transition: 0.3s;
 }
 
-/* 3. Make them Gold on Hover */
-.nav-links a:hover {
-    color: #d4af37; /* BullishFX Gold */
-}
-
-/* 4. Fix the WhatsApp Button to stay Green/Gold */
-.btn-whatsapp {
-    background: #25d366;
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: white !important;
-}
-
-.btn-whatsapp:hover {
-    background: #d4af37 !important; /* Turns Gold when you hover! */
-    color: #000 !important;
-}
-
-/* Navbar Link Styling */
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff; /* White text */
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Gold Hover Effect */
-.nav-links a:hover {
-    color: #d4af37; /* Signature Gold */
-}
-
-/* Remove the bullet points if they appear */
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* --- Clean Professional Navbar --- */
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Spacing between links */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff; /* Start white for a clean look */
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-/* The Gold Hover Effect */
-.nav-links a:hover {
-    color: #d4af37; /* Bullish Gold */
-    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Subtle glow */
-}
-
-/* Styling the WhatsApp Button specifically */
-.btn-whatsapp {
-    background: #25d366;
-    color: white !important; /* Keep text white even on hover */
-    padding: 8px 18px;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-.btn-whatsapp:hover {
-    background: #128c7e;
-    transform: translateY(-2px); /* Slight lift effect */
-}
-
-/* --- Return to Dashboard Button --- */
-.return-link {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 25px;
-    background-color: #1e293b; /* Deep Blue Slate */
-    color: #60a5fa !important; /* Professional Light Blue */
-    text-decoration: none;
-    border: 1px solid #60a5fa;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.return-link:hover {
-    background-color: #60a5fa;
-    color: #000000 !important; /* Text turns black for contrast on hover */
-    box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
-    transform: translateY(-2px);
-}
-
-/* --- MOBILE MENU FIX --- */
+/* --- 7. MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* We hide the standard menu... */
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(10, 14, 23, 0.98); /* Dark background */
-        padding: 20px 0;
-        border-bottom: 2px solid #d4af37; /* Gold bottom line */
-        text-align: center;
-        gap: 15px;
-        z-index: 999;
-    }
-
-    /* This class will be "toggled" by your JavaScript */
-    .nav-links.active {
-        display: flex; /* ...and show it when clicked */
-    }
-
     .menu-toggle {
-        display: block; /* Shows the "Hamburger" icon (three bars) */
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         cursor: pointer;
     }
 
     .menu-toggle span {
-        display: block;
         width: 25px;
         height: 3px;
-        background: #d4af37; /* Gold bars */
-        margin: 5px auto;
-        transition: all 0.3s ease;
-    }
-}
-
-    /* THIS IS THE MISSING PIECE */
-    .nav-links.active {
-        display: flex !important; /* Forces the menu to show when clicked */
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hidden by default */
-        flex-direction: column;
-        
-        /* Positioning Fix */
-        position: absolute;
-        top: 100%; /* This makes it start exactly where the navbar ends */
-        left: 0;
-        width: 100%;
-        
-        /* Content Fix */
-        background: rgba(10, 14, 23, 0.98); /* Solid dark color */
-        padding: 20px 0;
-        z-index: 1000;
-        
-        /* Remove fullscreen stretching */
-        height: auto; 
-        max-height: 400px; /* Limits how far it drops down */
-        overflow-y: auto; /* Adds a scroll if you have too many links */
-        
-        border-bottom: 2px solid #d4af37; /* The "Bullish" Gold line at the bottom */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-
-    /* Make the links look like a list, not a mess */
-    .nav-links li {
-        width: 100%;
-        margin: 0;
-    }
-
-    .nav-links a {
-        padding: 15px 20px;
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-}
-
-nav.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* THIS IS THE ANCHOR */
-    padding: 15px 5%;
-    background: #0a0e17;
-}
-
-nav.container {
-    /* Replacing gold with a professional deep blue gradient */
-    background: linear-gradient(90deg, #1e293b, #0f172a); 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 5%;
-    border-bottom: 2px solid #60a5fa; /* That bright blue from your heading */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    margin: 20px auto;
-    width: 92%;
-}
-
-/* Make the text WHITE so it pops against the blue bar */
-.nav-links a {
-    color: #ffffff !important;
-    font-weight: 600;
-}
-
-/* Hover effect: text turns to that bright light blue */
-.nav-links a:hover {
-    color: #60a5fa !important;
-}
-
-/* This creates the clear division between your pages */
-.page-divider {
-    height: 4px;
-    width: 60%; /* Doesn't touch the edges, looks cleaner */
-    background: linear-gradient(90deg, transparent, #60a5fa, transparent);
-    margin: 0 auto;
-    border-radius: 2px;
-}
-/* 1. The Section Container */
-.content-section {
-    min-height: 100vh; /* Force it to take the full screen */
-    width: 100%;
-    display: block;   /* Changed from flex to block to ensure content shows */
-    position: relative;
-    padding-top: 80px; /* Room for your fixed navbar */
-    margin: 0;
-    overflow: visible; /* Make sure content isn't being cut off */
-    border: none !important; 
-}
-
-/* 2. The Single Razor-Thin Line */
-.page-divider {
-    display: block;
-    height: 1px !important;
-    width: 80%;
-    margin: 0 auto;
-    background: rgba(96, 165, 250, 0.3); /* Subtle blue */
-    border: none !important;
-}
-
-/* 3. Ensure the Chart Container has height */
-#main-trading-chart {
-    min-height: 600px;
-    width: 100%;
-    display: block;
-}
-
-/* 3. Clean the footer so it doesn't add extra lines */
-footer {
-    background: transparent !important;
-    border: none !important;
-    padding: 20px 0;
-}
-}
-/* 1. Reset the top ticker to stay thin */
-.ticker-tape-container, 
-header .tradingview-widget-container {
-    height: 45px !important;
-    overflow: hidden;
-}
-
-/* 2. Style the main market chart specifically */
-#main-trading-chart {
-    width: 100% !important;
-    height: 600px !important;
-    border: 2px solid #60a5fa; /* That Bullish blue border */
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* 3. Ensure the container takes up the full width of the screen */
-#markets .container {
-    max-width: 95%;
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* This ensures the space above and below the thin line is equal */
-.content-section {
-    padding: 80px 0 !important; /* Adjust this number to change the "breathing room" */
-    margin: 0 !important;
-}
-
-/* This makes sure the first element in a section doesn't push the divider away */
-.content-section h2 {
-    margin-top: 0;
-}
-
-/* Professional Scaling */
-h2 {
-    font-size: 2rem !important; /* Was probably 3rem+ before */
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1rem !important; /* Clean, readable size */
-    line-height: 1.6;
-    max-width: 700px; /* Prevents text from stretching too wide */
-    margin: 0 auto 20px;
-}
-
-.content-section {
-    padding: 60px 0 !important; /* Reduces the massive gaps between sections */
-}
-
-.about-image {
-    width: 100%;
-    max-width: 300px; /* This is the "sweet spot" size */
-    height: auto;
-    border-radius: 15px;
-    border: 1px solid rgba(96, 165, 250, 0.3);
-    box-shadow: 0 0 30px rgba(96, 165, 250, 0.1); /* Subtle blue glow */
-    display: block;
-    margin: 0 auto;
-}
-
-#about p {
-    line-height: 1.8;
-    letter-spacing: 0.5px;
-    color: #cbd5e1; /* A slightly brighter gray to make it readable against dark blue */
-}
-
-.contact-input {
-    background: #0f172a !important;
-    border: 1px solid #1e293b !important;
-    padding: 12px 15px !important;
-    border-radius: 6px !important;
-    color: #fff !important;
-    font-size: 0.9rem !important;
-    width: 100%;
-    outline: none;
-    transition: 0.3s;
-}
-
-.contact-input:focus {
-    border-color: #60a5fa !important;
-    background: #1e293b !important;
-}
-
-/* Custom styling for the select dropdown arrow */
-select.contact-input {
-    appearance: none;
-    cursor: pointer;
-}
-
-.social-icon-row a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-    filter: brightness(1.2);
-}
-
-.testimonial-card {
-    background: rgba(15, 23, 42, 0.5); /* Transparent dark blue */
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: left;
-    transition: 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(96, 165, 250, 0.4);
-    background: rgba(15, 23, 42, 0.8);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.mentorship-card {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(10px); /* This creates the "glass" look */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease;
-}
-
-.mentorship-card:hover {
-    transform: translateY(-15px);
-    border-color: #60a5fa;
-    box-shadow: 0 10px 40px rgba(96, 165, 250, 0.2);
-}
-
-/* Remove forced heights and tighten gaps */
-.content-section {
-    min-height: auto !important; /* Prevents sections from forcing 100% screen height */
-    height: auto !important; 
-    padding: 60px 0 !important; /* Standardizes top/bottom spacing */
-    margin: 0 !important;
-    overflow: hidden;
-}
-
-/* Fix for the container inside sections */
-.container {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* MOBILE OPTIMIZATIONS */
-@media (max-width: 768px) {
-    /* 1. Header & Navigation */
-    nav {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    /* 2. Hero Headings */
-    h1 {
-        font-size: 1.8rem !important; /* Makes big titles fit on one screen */
-        padding: 0 10px;
-    }
-
-    /* 3. Cards (Mentorship & Success) */
-    .course-grid, .success-grid {
-        display: flex;
-        flex-direction: column; /* Stacks cards on top of each other */
-        align-items: center;
-        gap: 30px;
-    }
-
-    .course-card, .success-card {
-        width: 90% !important; /* Cards take up full width on phone */
-        max-width: 350px;
-    }
-
-    /* 4. Calculator */
-    .calc-container {
-        width: 95% !important;
-        padding: 20px !important;
-    }
-
-    /* 5. Footer */
-    footer div {
-        text-align: center !important; /* Centers footer text on phone */
-    }
-
-    footer .social-icons {
-        justify-content: center;
-    }
-}
-
-/* Ensure the hamburger icon is ALWAYS on top of the menu itself */
-.menu-icon, #menu-btn, .hamburger { 
-    position: relative;
-    z-index: 10001 !important; /* One level higher than the menu links */
-    cursor: pointer;
-}
-
-/* Make sure the nav-links don't block the screen when they are closed */
-@media (max-width: 768px) {
-    .nav-links {
-        pointer-events: none; /* Disables the "invisible wall" when menu is closed */
-        opacity: 0;
+        background: #d4af37;
         transition: 0.3s;
     }
 
-    /* ONLY enable clicks when the menu is actually open */
-    #menu-toggle:checked ~ .nav-links {
-        pointer-events: auto;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    /* The Container */
     .nav-links {
-        display: none; /* Keep it hidden until 'active' */
+        display: none;
+        flex-direction: column;
         position: absolute;
-        top: 100%; /* Sits exactly at the bottom of your header */
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: #0a0e17; /* Solid background */
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        z-index: 9999 !important;
-        border-bottom: 2px solid #bf953f; /* Add a thin gold line at the bottom */
+        background: rgba(10, 14, 23, 0.98);
+        padding: 20px 0;
+        border-bottom: 2px solid #d4af37;
     }
 
-/* This forces the menu to show up when JavaScript adds the 'active' class */
-@media (max-width: 768px) {
     .nav-links.active {
         display: flex !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-    }
-}
-
-    /* The Trigger */
-    .nav-links.active {
-        display: flex !important;
-        height: auto !important; /* Forces it to grow based on the number of links */
     }
 
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.05); /* Separates links slightly */
-    }
-
+    .nav-links li { width: 100%; text-align: center; }
+    
     .nav-links a {
+        padding: 15px;
         display: block;
-        padding: 20px;
-        color: white;
-        font-size: 1.1rem;
-        width: 100%;
-    }
-}
-
-nav, header, .container {
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    border-bottom: none !important;
-}
-nav {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-/* FINAL RESET FOR NAVBAR */
-header, 
-nav, 
-nav.container, 
-.navbar {
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    text-decoration: none !important;
-}
-
-/* Remove the blue border you added to the gradient nav recently */
-nav.container {
-    border-bottom: 0px solid transparent !important;
-    box-shadow: none !important;
-}
-
-/* Force the header to have NO bottom line */
-header {
-    border-bottom: 0px solid transparent !important;
-}
-/* This ensures that when JavaScript adds 'active', the menu MUST show up */
-@media (max-width: 768px) {
-    .nav-links.active {
-        display: flex !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-        /* Position it right below the header */
-        position: absolute !important;
-        top: 60px; /* Adjust this based on your header height */
-        left: 0;
-        width: 100%;
-        background-color: #0a0e17; /* BullishFX Dark Theme */
-    }
-}
-
-.nav-container {
-    display: flex !important;
-    justify-content: space-between !important; /* This is the "magic" line */
-    align-items: center !important;
-    padding: 10px 5%;
-    background-color: #0a0e17; /* Matches your dark theme */
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Ensure the hamburger is visible on mobile */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex !important;
-        flex-direction: column;
-        cursor: pointer;
-        z-index: 10001;
-    }
-
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #bf953f; /* Your Gold color */
-        margin: 4px 0;
-        transition: 0.4s;
-    }
-
-    /* Keep nav-links hidden until active */
-    .nav-links {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* Sits exactly below header */
-        left: 0;
-        width: 100%;
-        background-color: #0a0e17;
-        z-index: 9999;
-    }
-
-    .nav-links.active {
-        display: flex !important; /* Shows menu when toggled */
-    }
-}
-   .nav-container {
-    display: flex !important;
-    justify-content: space-between !important; /* Pushes logo left, hamburger right */
-    align-items: center !important;
-    padding: 10px 20px;
-    background-color: #0a0e17;
-    position: relative; /* This is the "anchor" for the dropdown menu */
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    /* This makes the menu look like the small box in your example */
-    .nav-links {
-        display: none; /* Hidden until clicked */
-        position: absolute;
-        top: 100%;     /* Appears right under the navbar */
-        left: 0;
-        width: 60%;    /* Makes it small, covering only part of the screen */
-        background: #0a0e17;
-        flex-direction: column;
-        padding: 10px 0;
-        z-index: 1000;
-        border-right: 1px solid #bf953f; /* Gold accent line */
-    }
-
-    .nav-links.active {
-        display: flex !important; /* Shows it when JS is triggered */
-    }
-
-    .nav-links li {
-        padding: 8px 20px; /* Tight spacing between words */
-        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 }
