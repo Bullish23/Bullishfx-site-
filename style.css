@@ -1779,4 +1779,37 @@ header {
         display: flex !important; /* Shows menu when toggled */
     }
 }
-   
+   .nav-container {
+    display: flex !important;
+    justify-content: space-between !important; /* Pushes logo left, hamburger right */
+    align-items: center !important;
+    padding: 10px 20px;
+    background-color: #0a0e17;
+    position: relative; /* This is the "anchor" for the dropdown menu */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* This makes the menu look like the small box in your example */
+    .nav-links {
+        display: none; /* Hidden until clicked */
+        position: absolute;
+        top: 100%;     /* Appears right under the navbar */
+        left: 0;
+        width: 60%;    /* Makes it small, covering only part of the screen */
+        background: #0a0e17;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+        border-right: 1px solid #bf953f; /* Gold accent line */
+    }
+
+    .nav-links.active {
+        display: flex !important; /* Shows it when JS is triggered */
+    }
+
+    .nav-links li {
+        padding: 8px 20px; /* Tight spacing between words */
+        text-align: left;
+    }
+}
