@@ -49,8 +49,8 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 });
 
-function calculateLot() {
-    // 1. Get values from the HTML IDs
+ {
+    function calculateLot()// 1. Get values from the HTML IDs
     const instrumentValue = parseFloat(document.getElementById('instrument').value);
     const balance = parseFloat(document.getElementById('balance').value);
     const risk = parseFloat(document.getElementById('risk').value);
