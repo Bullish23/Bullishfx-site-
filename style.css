@@ -1194,7 +1194,7 @@ html {
     .nav-links.active {
         display: flex !important; /* Forces the menu to show when clicked */
     }
-}
+
 
 
 
