@@ -1471,7 +1471,7 @@ select.contact-input {
         display: none;
         position: absolute;
         top: 70%;
-        right: 0;
+        right: 15px;
         width: 220px;
         background-color: #0a0e17;
         flex-direction: column;
