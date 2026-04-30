@@ -454,12 +454,7 @@ main {
     font-size: 0.9rem;
 }
 
-/* Fix for mobile phones */
-@media screen and (max-width: 800px) {
-    .contact-container {
-        flex-direction: column;
-    }
-}
+
 
 /* --- MENTORSHIP SECTION --- */
 .mentorship-section {
