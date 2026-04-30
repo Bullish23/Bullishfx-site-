@@ -1475,7 +1475,7 @@ select.contact-input {
         width: 220px;
         background-color: #0a0e17;
         flex-direction: column;
-        padding: 0;
+        padding: 10px 0;
         margin: 0;
         z-index: 9999;
         border-bottom: 2px solid #bf953f;
@@ -1500,7 +1500,7 @@ select.contact-input {
 
     .nav-links a {
         display: block;
-        padding: 20px;
+        padding: 15px 20px;
         color: white;
         font-size: 0.7rem;
         width: 200px;
