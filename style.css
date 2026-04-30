@@ -1549,7 +1549,7 @@ header {
         /* Position it right below the header */
         position: absolute !important;
         top: 60px; /* Adjust this based on your header height */
-        left: 0;
+        right: 15px;
         width: 100%;
         background-color: #0a0e17; /* BullishFX Dark Theme */
     }
