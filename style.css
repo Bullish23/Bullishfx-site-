@@ -1465,56 +1465,37 @@ select.contact-input {
     cursor: pointer;
 }
 
-/* Make sure the nav-links don't block the screen when they are closed */
 @media (max-width: 768px) {
+
     .nav-links {
-        pointer-events: none; /* Disables the "invisible wall" when menu is closed */
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0a0e17;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        z-index: 9999;
+        border-bottom: 2px solid #bf953f;
+
+        pointer-events: none;
         opacity: 0;
         transition: 0.3s;
     }
 
-    /* ONLY enable clicks when the menu is actually open */
-    #menu-toggle:checked ~ .nav-links {
-        pointer-events: auto;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    /* The Container */
-    .nav-links {
-        display: none; /* Keep it hidden until 'active' */
-        position: absolute;
-        top: 100%; /* Sits exactly at the bottom of your header */
-        left: 0;
-        width: 100%;
-        background-color: #0a0e17; /* Solid background */
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        z-index: 9999 !important;
-        border-bottom: 2px solid #bf953f; /* Add a thin gold line at the bottom */
-    }
-
-/* This forces the menu to show up when JavaScript adds the 'active' class */
-@media (max-width: 768px) {
     .nav-links.active {
         display: flex !important;
         opacity: 1 !important;
         pointer-events: auto !important;
-    }
-}
-
-    /* The Trigger */
-    .nav-links.active {
-        display: flex !important;
-        height: auto !important; /* Forces it to grow based on the number of links */
+        height: auto;
     }
 
     .nav-links li {
         width: 100%;
         text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.05); /* Separates links slightly */
+        border-top: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav-links a {
