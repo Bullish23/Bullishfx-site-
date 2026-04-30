@@ -1422,21 +1422,6 @@ select.contact-input {
     margin-bottom: 0 !important;
 }
 
-/* MOBILE OPTIMIZATIONS */
-@media (max-width: 768px) {
-    /* 1. Header & Navigation */
-    nav {
-        flex-direction: column;
-        padding: 15px;
-    }
-    
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        margin-top: 20px;
-    }
 
     /* 2. Hero Headings */
     h1 {
