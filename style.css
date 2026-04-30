@@ -1473,7 +1473,7 @@ select.contact-input {
         top: 70%;
         right: 15px;
         width: 100px;
-        background-color: #0a0e17;
+        background-color: transparent;
         flex-direction: column;
         padding: 10px 0;
         margin: 0;
