@@ -1,5 +1,5 @@
 
-{
+
 html {
     scroll-behavior: smooth;
 }
@@ -51,11 +51,6 @@ header {
     background-color: #0a0e17; /* Ensure it has a solid background so you can't see text behind it */
 }
 
-/* If you have a mobile-specific menu container, add it there too */
-.nav-links {
-    z-index: 10000 !important;
-    background: #0a0e17; /* Matches your theme */
-}
 
 .logo {
     font-size: 24px;
