@@ -1472,7 +1472,7 @@ select.contact-input {
         position: absolute;
         top: 70%;
         left: 0;
-        width: 100%;
+        width: 220px;
         background-color: #0a0e17;
         flex-direction: column;
         padding: 0;
