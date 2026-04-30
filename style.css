@@ -1548,7 +1548,7 @@ header {
         pointer-events: auto !important;
         /* Position it right below the header */
         position: absolute !important;
-        top: 60px; /* Adjust this based on your header height */
+        top: 70px; /* Adjust this based on your header height */
         right: 15px;
         width: 100%;
         background-color: #0a0e17; /* BullishFX Dark Theme */
